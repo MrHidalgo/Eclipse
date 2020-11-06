@@ -1,0 +1,28 @@
+// FOOTER :: START
+
+.footer {
+	padding-top: 105px;
+	padding-bottom: 296px;
+	background: linear-gradient(to bottom, rgba(0,26,40,1) 0%,rgba(8,20,18,1) 100%);
+
+	&__wrapper {
+		display: flex;
+
+		&-left,
+		&-right {
+			width: 50%;
+		}
+
+		&-left {
+			padding-left: 40px;
+			padding-right: 40px;
+		}
+
+		&-right {
+			padding-left: 20px;
+			padding-right: 40px;
+		}
+	}
+}
+
+// FOOTER :: END
