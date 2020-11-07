@@ -1,5 +1,87 @@
 // LOGOTYPE :: START
 
-.logo {}
+.logo {
+	&.logo--footer {
+		max-width: 118px;
+		padding-bottom: 23px;
+	}
+
+	&.logo--light {
+		.logo {
+			&__img {
+				&-curve {
+					&-1 {
+						stroke:#fff;
+					}
+					&-2 {
+						stroke:#fff;
+					}
+				}
+				&-circle {
+					&--left {
+						fill:#fff
+					}
+					&--middle {
+						stroke:#fff;
+					}
+					&--right {
+						stroke:#fff;
+					}
+				}
+				&-letter {
+					&--top {
+						fill:#1d1d1b;
+						stroke:#1d1d1b;
+					}
+					&--bottom {
+						fill:#1d1d1b;
+						stroke:#fff;
+					}
+				}
+			}
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+
+		&-curve {
+			&-1 {
+				stroke:#1d1d1b;
+			}
+			&-2 {
+				stroke:#1d1d1b;
+			}
+		}
+		&-circle {
+			&--left {
+				fill:#1d1d1b
+			}
+			&--middle {
+				stroke:#1d1d1b;
+			}
+			&--right {
+				stroke:#1d1d1b;
+			}
+		}
+		&-letter {
+			&--top {
+				fill:#fff;
+				stroke:#fff;
+			}
+			&--bottom {
+				fill:#fff;
+				stroke:#1d1d1b;
+			}
+		}
+	}
+}
 
 // LOGOTYPE :: END

@@ -1,6 +1,45 @@
+@charset "UTF-8";
 /* line 26, src/scss/_utilities/_extend.scss */
 body {
   font-family: 'Open Sans', sans-serif;
+}
+
+@font-face {
+  font-family: "iconFont";
+  src: url("../fonts/iconFont.eot");
+  src: url("../fonts/iconFont.eot?#iefix") format("eot"), url("../fonts/iconFont.woff2") format("woff2"), url("../fonts/iconFont.woff") format("woff"), url("../fonts/iconFont.ttf") format("truetype"), url("../fonts/iconFont.svg#iconFont") format("svg");
+}
+
+/* line 23, src/scss/_generated/_spriteFont.scss */
+.icon-facebook:before, .icon-instagram:before, .icon-twitter:before, .icon-youtube:before {
+  font-family: "iconFont", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-transform: none;
+}
+
+/* line 47, src/scss/_generated/_spriteFont.scss */
+.icon-facebook:before {
+  content: "";
+}
+
+/* line 47, src/scss/_generated/_spriteFont.scss */
+.icon-instagram:before {
+  content: "";
+}
+
+/* line 47, src/scss/_generated/_spriteFont.scss */
+.icon-twitter:before {
+  content: "";
+}
+
+/* line 47, src/scss/_generated/_spriteFont.scss */
+.icon-youtube:before {
+  content: "";
 }
 
 /* line 1, src/scss/_shared/_main-setting-reset.scss */
@@ -191,7 +230,7 @@ picture {
 
 /* line 20, src/scss/_shared/_grid.scss */
 .c-grid {
-  max-width: 1280;
+  max-width: 1280px;
 }
 
 /* line 26, src/scss/_shared/_grid.scss */
@@ -204,6 +243,169 @@ picture {
   max-width: 100%;
 }
 
+/* line 4, src/scss/_shared/_common.scss */
+.copyright {
+  padding-bottom: 23px;
+}
+
+/* line 7, src/scss/_shared/_common.scss */
+.copyright__text {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+/* line 15, src/scss/_shared/_common.scss */
+.social {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 19, src/scss/_shared/_common.scss */
+.social__link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 42px;
+  height: 42px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #ffffff;
+}
+
+/* line 28, src/scss/_shared/_common.scss */
+.social__link:not(:last-of-type) {
+  margin-right: 25px;
+}
+
+/* line 32, src/scss/_shared/_common.scss */
+.social__link .icon-font {
+  color: #07181e;
+  font-size: 20px;
+}
+
+/* line 1, src/scss/_shared/_iconFont.scss */
+.icon-font {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1;
+}
+
+/* line 4, src/scss/_macros/_logotype.scss */
+.logo.logo--footer {
+  max-width: 118px;
+  padding-bottom: 23px;
+}
+
+/* line 13, src/scss/_macros/_logotype.scss */
+.logo.logo--light .logo__img-curve-1 {
+  stroke: #fff;
+}
+
+/* line 16, src/scss/_macros/_logotype.scss */
+.logo.logo--light .logo__img-curve-2 {
+  stroke: #fff;
+}
+
+/* line 21, src/scss/_macros/_logotype.scss */
+.logo.logo--light .logo__img-circle--left {
+  fill: #fff;
+}
+
+/* line 24, src/scss/_macros/_logotype.scss */
+.logo.logo--light .logo__img-circle--middle {
+  stroke: #fff;
+}
+
+/* line 27, src/scss/_macros/_logotype.scss */
+.logo.logo--light .logo__img-circle--right {
+  stroke: #fff;
+}
+
+/* line 32, src/scss/_macros/_logotype.scss */
+.logo.logo--light .logo__img-letter--top {
+  fill: #1d1d1b;
+  stroke: #1d1d1b;
+}
+
+/* line 36, src/scss/_macros/_logotype.scss */
+.logo.logo--light .logo__img-letter--bottom {
+  fill: #1d1d1b;
+  stroke: #fff;
+}
+
+/* line 45, src/scss/_macros/_logotype.scss */
+.logo__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 50, src/scss/_macros/_logotype.scss */
+.logo__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 56, src/scss/_macros/_logotype.scss */
+.logo__img-curve-1 {
+  stroke: #1d1d1b;
+}
+
+/* line 59, src/scss/_macros/_logotype.scss */
+.logo__img-curve-2 {
+  stroke: #1d1d1b;
+}
+
+/* line 64, src/scss/_macros/_logotype.scss */
+.logo__img-circle--left {
+  fill: #1d1d1b;
+}
+
+/* line 67, src/scss/_macros/_logotype.scss */
+.logo__img-circle--middle {
+  stroke: #1d1d1b;
+}
+
+/* line 70, src/scss/_macros/_logotype.scss */
+.logo__img-circle--right {
+  stroke: #1d1d1b;
+}
+
+/* line 75, src/scss/_macros/_logotype.scss */
+.logo__img-letter--top {
+  fill: #fff;
+  stroke: #fff;
+}
+
+/* line 79, src/scss/_macros/_logotype.scss */
+.logo__img-letter--bottom {
+  fill: #fff;
+  stroke: #1d1d1b;
+}
+
 /* line 3, src/scss/_components/_header.scss */
 .header {
   background: -webkit-gradient(linear, left top, left bottom, from(#001a28), to(#081412));
@@ -214,6 +416,7 @@ picture {
 
 /* line 3, src/scss/_components/_footer.scss */
 .footer {
+  position: relative;
   padding-top: 105px;
   padding-bottom: 296px;
   background: -webkit-gradient(linear, left top, left bottom, from(#001a28), to(#081412));
@@ -222,29 +425,132 @@ picture {
   background: linear-gradient(to bottom, #001a28 0%, #081412 100%);
 }
 
-/* line 8, src/scss/_components/_footer.scss */
+/* line 9, src/scss/_components/_footer.scss */
+.footer__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 16, src/scss/_components/_footer.scss */
+.footer__bg div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+}
+
+/* line 27, src/scss/_components/_footer.scss */
 .footer__wrapper {
+  z-index: 2;
+  position: relative;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-/* line 11, src/scss/_components/_footer.scss */
+/* line 32, src/scss/_components/_footer.scss */
 .footer__wrapper-left, .footer__wrapper-right {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 50%;
 }
 
-/* line 16, src/scss/_components/_footer.scss */
+/* line 39, src/scss/_components/_footer.scss */
 .footer__wrapper-left {
   padding-left: 40px;
   padding-right: 40px;
 }
 
-/* line 21, src/scss/_components/_footer.scss */
+/* line 43, src/scss/_components/_footer.scss */
+.footer__wrapper-left > div {
+  width: 100%;
+  max-width: -webkit-calc((100% - 70px) / 2);
+  max-width: calc((100% - 70px) / 2);
+}
+
+/* line 49, src/scss/_components/_footer.scss */
 .footer__wrapper-right {
   padding-left: 20px;
   padding-right: 40px;
+}
+
+/* line 54, src/scss/_components/_footer.scss */
+.footer__wrapper-right > div:nth-of-type(1) {
+  width: 40%;
+}
+
+/* line 57, src/scss/_components/_footer.scss */
+.footer__wrapper-right > div:nth-of-type(2) {
+  width: 60%;
+}
+
+/* line 64, src/scss/_components/_footer.scss */
+.footer__title {
+  padding-bottom: 35px;
+  font-weight: 700;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+/* line 71, src/scss/_components/_footer.scss */
+.footer__subtitle {
+  padding-bottom: 5px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+/* line 79, src/scss/_components/_footer.scss */
+.footer__address p {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* line 83, src/scss/_components/_footer.scss */
+.footer__address p + p {
+  padding-top: 35px;
+}
+
+/* line 90, src/scss/_components/_footer.scss */
+.footer__hours p {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* line 96, src/scss/_components/_footer.scss */
+.footer__nav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/* line 100, src/scss/_components/_footer.scss */
+.footer__nav a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

@@ -1,16 +1,76 @@
 // FOOTER :: START
 
 footer#footer.footer
+
+	.footer__bg
+		div(style='background-image: url("img/img-footer-illustration-1@2x.png")')
+		div(style='background-image: url("img/img-footer-illustration-1@2x.png")')
+		div(style='background-image: url("img/img-footer-illustration-1@2x.png")')
+
 	.c-grid
 		.footer__wrapper
 			.footer__wrapper-left
 
 				div
+
+					p.footer__title Eclipse Grow Tents
+
+					.footer__collapse-body
+						.footer__address
+							p Phone: 0508 4 4372257
+							p!= "Warehouse Address: <br>153 Hepburn Road, Glendene, Auckland 0602"
+
 				div
+
+					.footer__collapse
+						.footer__collapse-head
+							div
+								p.footer__subtitle Showroom Hours
+							div
+						.footer__collapse-body
+							.footer__hours
+								p Monday: Closed
+								p Tuesday: 10 am - 3 pm
+								p Wednesday: 10 am - 3 pm
+								p Thursday: 10 am - 3 pm
+								p Friday: 10 am - 3 pm
+								p Saturday&Sunday : Closed
 
 			.footer__wrapper-right
 
 				div
+
+					.footer__collapse
+						.footer__collapse-head
+							div
+								p.footer__subtitle Sitemap
+							div
+						.footer__collapse-body
+							nav.footer__nav
+								a(href="#") About
+								a(href="#") Products
+								a(href="#") Delivery & Warranty
+								a(href="#") Contact us
+								a(href="#") Terms & Conditions
+								a(href="#") Privacy Policy
+
 				div
+
+					.logo.logo--light.logo--footer
+						a.logo__btn(href="#")
+							+logo()
+
+					.copyright
+						p.copyright__text Copyright ©  2020 Eclipse Grow Tents. Company S.L. All rights reserved.
+
+					.social
+						a.social__link(href="#")
+							i.icon-font.icon-youtube
+						a.social__link(href="#")
+							i.icon-font.icon-twitter
+						a.social__link(href="#")
+							i.icon-font.icon-facebook
+						a.social__link(href="#")
+							i.icon-font.icon-instagram
 
 // FOOTER :: END
