@@ -1,7 +1,25 @@
 @charset "UTF-8";
+/* line 14, src/scss/_utilities/_extend.scss */
+.slideshow .swiper-slide img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
 /* line 26, src/scss/_utilities/_extend.scss */
 body {
   font-family: 'Open Sans', sans-serif;
+}
+
+/* line 29, src/scss/_utilities/_extend.scss */
+.contacts__title {
+  font-family: 'Permanent Marker', 'Open Sans', cursive, sans-serif;
 }
 
 @font-face {
@@ -11,7 +29,7 @@ body {
 }
 
 /* line 23, src/scss/_generated/_spriteFont.scss */
-.icon-facebook:before, .icon-instagram:before, .icon-twitter:before, .icon-youtube:before {
+.icon-facebook:before, .icon-instagram:before, .icon-maximize:before, .icon-twitter:before, .icon-youtube:before {
   font-family: "iconFont", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,24 +40,29 @@ body {
   text-transform: none;
 }
 
-/* line 47, src/scss/_generated/_spriteFont.scss */
+/* line 50, src/scss/_generated/_spriteFont.scss */
 .icon-facebook:before {
   content: "";
 }
 
-/* line 47, src/scss/_generated/_spriteFont.scss */
+/* line 50, src/scss/_generated/_spriteFont.scss */
 .icon-instagram:before {
   content: "";
 }
 
-/* line 47, src/scss/_generated/_spriteFont.scss */
-.icon-twitter:before {
+/* line 50, src/scss/_generated/_spriteFont.scss */
+.icon-maximize:before {
   content: "";
 }
 
-/* line 47, src/scss/_generated/_spriteFont.scss */
-.icon-youtube:before {
+/* line 50, src/scss/_generated/_spriteFont.scss */
+.icon-twitter:before {
   content: "";
+}
+
+/* line 50, src/scss/_generated/_spriteFont.scss */
+.icon-youtube:before {
+  content: "";
 }
 
 /* line 1, src/scss/_shared/_main-setting-reset.scss */
@@ -298,6 +321,142 @@ picture {
   font-size: 20px;
 }
 
+/* line 1, src/scss/_shared/_magnificPopup.scss */
+.c-modal {
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+}
+
+/* line 12, src/scss/_shared/_magnificPopup.scss */
+.mfp-gallery .mfp-counter {
+  display: none;
+}
+
+/* line 16, src/scss/_shared/_magnificPopup.scss */
+.mfp-gallery .mfp-figure {
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+/* line 30, src/scss/_shared/_magnificPopup.scss */
+.mfp-zoom-in .mfp-with-anim {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+/* line 36, src/scss/_shared/_magnificPopup.scss */
+.mfp-zoom-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* line 42, src/scss/_shared/_magnificPopup.scss */
+.mfp-zoom-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+/* line 46, src/scss/_shared/_magnificPopup.scss */
+.mfp-zoom-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+/* line 52, src/scss/_shared/_magnificPopup.scss */
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0;
+}
+
+/* line 56, src/scss/_shared/_magnificPopup.scss */
+.mfp-zoom-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+/* line 67, src/scss/_shared/_magnificPopup.scss */
+.mfp-slide-in .mfp-with-anim {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+/* line 73, src/scss/_shared/_magnificPopup.scss */
+.mfp-slide-in.mfp-bg {
+  opacity: 0;
+  -webkit-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+/* line 79, src/scss/_shared/_magnificPopup.scss */
+.mfp-slide-in.mfp-ready .mfp-with-anim {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+
+/* line 83, src/scss/_shared/_magnificPopup.scss */
+.mfp-slide-in.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+
+/* line 89, src/scss/_shared/_magnificPopup.scss */
+.mfp-slide-in.mfp-removing .mfp-with-anim {
+  -webkit-transform: translateX(100%);
+      -ms-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 0;
+}
+
+/* line 93, src/scss/_shared/_magnificPopup.scss */
+.mfp-slide-in.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 /* line 1, src/scss/_shared/_iconFont.scss */
 .icon-font {
   display: -webkit-box;
@@ -551,6 +710,254 @@ picture {
   display: flex;
   font-size: 16px;
   color: #ffffff;
+}
+
+/* line 3, src/scss/_components/_slideshow.scss */
+.slideshow {
+  padding-top: 35px;
+  padding-bottom: 45px;
+}
+
+/* line 8, src/scss/_components/_slideshow.scss */
+.slideshow__wrapper-1 {
+  padding-bottom: 35px;
+}
+
+/* line 14, src/scss/_components/_slideshow.scss */
+.slideshow .swiper-container {
+  opacity: 0;
+}
+
+/* line 18, src/scss/_components/_slideshow.scss */
+.slideshow .swiper-slide {
+  position: relative;
+  height: 530px;
+}
+
+/* line 22, src/scss/_components/_slideshow.scss */
+.slideshow .swiper-slide-link {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* line 33, src/scss/_components/_slideshow.scss */
+.slideshow__preview {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 37, src/scss/_components/_slideshow.scss */
+.slideshow__preview-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 40px;
+}
+
+/* line 43, src/scss/_components/_slideshow.scss */
+.slideshow__preview .icon-font {
+  margin-right: 10px;
+  font-size: 40px;
+  color: #000000;
+}
+
+/* line 49, src/scss/_components/_slideshow.scss */
+.slideshow__preview p {
+  color: #000000;
+  font-size: 18px;
+}
+
+/* line 53, src/scss/_components/_slideshow.scss */
+.slideshow__preview p span {
+  color: #e5b44c;
+  font-weight: 700;
+}
+
+/* line 3, src/scss/_components/_contacts.scss */
+.contacts {
+  padding-top: 45px;
+  padding-bottom: 70px;
+}
+
+/* line 7, src/scss/_components/_contacts.scss */
+.contacts__title {
+  padding-bottom: 50px;
+  font-size: 55px;
+  color: #054d57;
+  line-height: 1.2;
+  text-align: center;
+}
+
+/* line 16, src/scss/_components/_contacts.scss */
+.contacts__desc {
+  padding-bottom: 45px;
+  font-size: 18px;
+  color: black;
+  line-height: 1.667;
+  text-align: center;
+}
+
+/* line 24, src/scss/_components/_contacts.scss */
+.contacts__form {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 33, src/scss/_components/_contacts.scss */
+.contacts__form-field {
+  width: 100%;
+  padding-bottom: 33px;
+}
+
+/* line 37, src/scss/_components/_contacts.scss */
+.contacts__form-field--btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 50px;
+}
+
+/* line 44, src/scss/_components/_contacts.scss */
+.contacts__form input,
+.contacts__form textarea,
+.contacts__form button {
+  outline: none;
+  position: relative;
+  border-width: 2px;
+  border-color: #b0b0b0;
+  border-style: solid;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-border-radius: 0;
+          border-radius: 0;
+  background-color: #efefef;
+}
+
+/* line 57, src/scss/_components/_contacts.scss */
+.contacts__form input,
+.contacts__form textarea {
+  width: 100%;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+/* line 88, src/scss/_utilities/_mixin.scss */
+.contacts__form input.placeholder,
+.contacts__form textarea.placeholder {
+  font-size: 18px;
+  color: #b0b0b0;
+  line-height: 1.2;
+}
+
+/* line 89, src/scss/_utilities/_mixin.scss */
+.contacts__form input:-moz-placeholder,
+.contacts__form textarea:-moz-placeholder {
+  font-size: 18px;
+  color: #b0b0b0;
+  line-height: 1.2;
+}
+
+/* line 90, src/scss/_utilities/_mixin.scss */
+.contacts__form input::-moz-placeholder,
+.contacts__form textarea::-moz-placeholder {
+  font-size: 18px;
+  color: #b0b0b0;
+  line-height: 1.2;
+}
+
+/* line 91, src/scss/_utilities/_mixin.scss */
+.contacts__form input:-ms-input-placeholder,
+.contacts__form textarea:-ms-input-placeholder {
+  font-size: 18px;
+  color: #b0b0b0;
+  line-height: 1.2;
+}
+
+/* line 92, src/scss/_utilities/_mixin.scss */
+.contacts__form input::-webkit-input-placeholder,
+.contacts__form textarea::-webkit-input-placeholder {
+  font-size: 18px;
+  color: #b0b0b0;
+  line-height: 1.2;
+}
+
+/* line 69, src/scss/_components/_contacts.scss */
+.contacts__form input {
+  height: 60px;
+  padding: 0 40px;
+}
+
+/* line 74, src/scss/_components/_contacts.scss */
+.contacts__form textarea {
+  resize: none;
+  height: 148px;
+  padding: 20px 40px;
+}
+
+/* line 80, src/scss/_components/_contacts.scss */
+.contacts__form button {
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-width: 227px;
+  height: 47px;
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-border-radius: 2em;
+          border-radius: 2em;
+  background-color: #df9801;
+  font-size: 18.431px;
+  color: white;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
 }
 
 /*# sourceMappingURL=maps/app.css.map */

@@ -1,0 +1,47 @@
+// SECTION :: START
+
+section#slideshow.slideshow(popup-gallery-js)
+
+	.slideshow__wrapper.slideshow__wrapper-1
+
+		// small width - 366px
+		// medium width - 568px
+		// big width - 768px
+		mixin swiperContent()
+			.swiper-slide(style='width:768px;')
+				a.swiper-slide-link(href="img/img-slideshow-big-1@2x.png" data-effect='mfp-zoom-in' title='Some image title')
+					img(src="img/img-slideshow-big-1.png" srcset="img/img-slideshow-big-1@2x.png 2x" alt="")
+			.swiper-slide(style='width:366px;')
+				a.swiper-slide-link(href="img/img-slideshow-small-1@2x.png" data-effect='mfp-zoom-in' title='Some image title')
+					img(src="img/img-slideshow-small-1.png" srcset="img/img-slideshow-small-1@2x.png 2x" alt="")
+			.swiper-slide(style='width:568px;')
+				a.swiper-slide-link(href="img/img-slideshow-medium-1@2x.png" data-effect='mfp-zoom-in' title='Some image title')
+					img(src="img/img-slideshow-medium-1.png" srcset="img/img-slideshow-medium-1@2x.png 2x" alt="")
+
+		+swiper('slideshow1Swiper', 'swiperContent', false, false, false)
+
+	.slideshow__wrapper.slideshow__wrapper-2(dir='rtl')
+
+		// small width - 366px
+		// medium width - 568px
+		// big width - 768px
+		mixin swiperContent()
+			.swiper-slide(style='width:366px;')
+				a.swiper-slide-link(href="img/img-slideshow-small-1@2x.png" data-effect='mfp-zoom-in' title='Some image title')
+					img(src="img/img-slideshow-small-1.png" srcset="img/img-slideshow-small-1@2x.png 2x" alt="")
+			.swiper-slide(style='width:768px;')
+				a.swiper-slide-link(href="img/img-slideshow-big-2@2x.png" data-effect='mfp-zoom-in' title='Some image title')
+					img(src="img/img-slideshow-big-2.png" srcset="img/img-slideshow-big-2@2x.png 2x" alt="")
+			.swiper-slide(style='width:568px;')
+				a.swiper-slide-link(href="img/img-slideshow-medium-2@2x.png" data-effect='mfp-zoom-in' title='Some image title')
+					img(src="img/img-slideshow-medium-2.png" srcset="img/img-slideshow-medium-2@2x.png 2x" alt="")
+
+		+swiper('slideshow2Swiper', 'swiperContent', false, false, false)
+
+
+	.slideshow__preview-wrapper
+		a.slideshow__preview(href="#" slideshow-preview-js)
+			i.icon-font.icon-maximize
+			p!= "<span>Click here</span> to see a photo slideshow from the gallery"
+
+// SECTION :: END

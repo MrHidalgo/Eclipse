@@ -1,4 +1,4 @@
-.modal {
+.c-modal {
   position: relative;
   width: 100%;
   //max-width: 500px;
@@ -6,6 +6,20 @@
   margin-left: auto;
   margin-right: auto;
   background-color: #fff;
+}
+
+.mfp-gallery {
+	.mfp-counter {
+		display: none;
+	}
+
+	.mfp-figure {
+		animation-name: fadeIn;
+		animation-duration: 0.75s;
+		animation-fill-mode: both;
+		animation-timing-function: ease-in-out;
+		backface-visibility: hidden;
+	}
 }
 
 
@@ -80,4 +94,9 @@
       opacity: 0;
     }
   }
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
 }

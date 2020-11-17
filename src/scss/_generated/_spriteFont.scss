@@ -33,11 +33,14 @@
 	@if $filename == instagram {
 		$char: "\E002";
 	}
-	@if $filename == twitter {
+	@if $filename == maximize {
 		$char: "\E003";
 	}
-	@if $filename == youtube {
+	@if $filename == twitter {
 		$char: "\E004";
+	}
+	@if $filename == youtube {
+		$char: "\E005";
 	}
 
 	@return $char;
@@ -60,6 +63,10 @@
 }
 .icon-instagram {
 	@include icon(instagram);
+
+}
+.icon-maximize {
+	@include icon(maximize);
 
 }
 .icon-twitter {
