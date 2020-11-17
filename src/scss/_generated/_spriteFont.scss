@@ -33,14 +33,20 @@
 	@if $filename == instagram {
 		$char: "\E002";
 	}
-	@if $filename == maximize {
+	@if $filename == left-arrow {
 		$char: "\E003";
 	}
-	@if $filename == twitter {
+	@if $filename == maximize {
 		$char: "\E004";
 	}
-	@if $filename == youtube {
+	@if $filename == quotation-marks {
 		$char: "\E005";
+	}
+	@if $filename == twitter {
+		$char: "\E006";
+	}
+	@if $filename == youtube {
+		$char: "\E007";
 	}
 
 	@return $char;
@@ -65,8 +71,16 @@
 	@include icon(instagram);
 
 }
+.icon-left-arrow {
+	@include icon(left-arrow);
+
+}
 .icon-maximize {
 	@include icon(maximize);
+
+}
+.icon-quotation-marks {
+	@include icon(quotation-marks);
 
 }
 .icon-twitter {

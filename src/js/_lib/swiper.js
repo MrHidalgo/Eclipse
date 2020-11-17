@@ -46,4 +46,37 @@ const initSwiper = () => {
       },
     }
   });
+
+	new Swiper('.reviewsSwiper', {
+		speed: 1000,
+		grabCursor: true,
+		centeredSlides: true,
+		slidesPerView: 1,
+		spaceBetween: 0,
+		effect: 'cube',
+		cubeEffect: {
+			shadow: false,
+			slideShadows: false,
+			shadowOffset: 20,
+			shadowScale: 0.94,
+		},
+		pagination: {
+			el: '.reviews .swiper-pagination',
+			type: 'fraction',
+			renderFraction: function (currentClass, totalClass) {
+				const zeroPad = (num, places) => String(num).padStart(places, '0');
+
+				let CUR = this.realIndex + 1,
+					TOTAL = this.slides.length;
+
+				return '<p class="' + currentClass + '">' + zeroPad(CUR, 2) + '</p>' +
+					'/' +
+					'<span class="' + totalClass + '">' + zeroPad(TOTAL, 2) + '</span>';
+			}
+		},
+		navigation: {
+			nextEl: '.reviews__btn--next',
+			prevEl: '.reviews__btn--prev',
+		},
+	});
 };

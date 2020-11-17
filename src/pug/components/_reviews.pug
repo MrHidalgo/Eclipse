@@ -1,0 +1,42 @@
+// SECTION :: START
+
+section#reviews.reviews
+	.c-grid
+		.reviews__wrapper
+
+			p.reviews__title.c-title What Our Clients Says
+
+			.reviews__slider
+
+				mixin swiperContent()
+					each val, idx in [1,2,3,4,5]
+						.swiper-slide
+							.reviews__block
+								.reviews__block-left
+									div
+										i.icon-font.icon-quotation-marks
+									div
+										p Arrived discreetly packaged in 2 days. Top quality and excellent value grow tents, this is my second one from this store. They went above and beyond with that order to ensure I got what I really needed, and didn't fail to impress me this time either.
+
+								.reviews__block-right
+
+									.reviews__user
+										.reviews__user-head
+											img(src="img/img-review-user.png" srcset="img/img-review-user@2x.png 2x" alt="")
+										.reviews__user-body
+											p Nikolas Tuffel
+											span Loyal Customar
+
+				+swiper('reviewsSwiper', 'swiperContent', false, false, false)
+
+			.reviews__action
+				div
+					a.reviews__btn.reviews__btn--prev(href="#")
+						i.icon-font.icon-left-arrow
+				div
+					.swiper-pagination
+				div
+					a.reviews__btn.reviews__btn--next(href="#")
+						i.icon-font.icon-left-arrow
+
+// SECTION :: END
