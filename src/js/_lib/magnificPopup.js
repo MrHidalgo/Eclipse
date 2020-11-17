@@ -52,4 +52,18 @@ const initPopups = () => {
 		}
 	});
 
+	$('[popup-video-js]').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'is-show',
+		removalDelay: 300,
+		preloader: false,
+		fixedContentPos: false,
+		callbacks: {
+			beforeOpen: function() {
+				this.st.mainClass = this.st.el.attr('data-effect');
+			}
+		}
+	});
+
 };

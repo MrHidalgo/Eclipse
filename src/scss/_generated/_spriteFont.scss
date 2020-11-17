@@ -39,14 +39,17 @@
 	@if $filename == maximize {
 		$char: "\E004";
 	}
-	@if $filename == quotation-marks {
+	@if $filename == play {
 		$char: "\E005";
 	}
-	@if $filename == twitter {
+	@if $filename == quotation-marks {
 		$char: "\E006";
 	}
-	@if $filename == youtube {
+	@if $filename == twitter {
 		$char: "\E007";
+	}
+	@if $filename == youtube {
+		$char: "\E008";
 	}
 
 	@return $char;
@@ -77,6 +80,10 @@
 }
 .icon-maximize {
 	@include icon(maximize);
+
+}
+.icon-play {
+	@include icon(play);
 
 }
 .icon-quotation-marks {
