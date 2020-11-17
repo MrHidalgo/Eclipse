@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
-.reviews__user-head img, .slideshow .swiper-slide img {
+.best__block-bg img, .reviews__user-head img, .slideshow .swiper-slide img {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@ body {
 }
 
 /* line 29, src/scss/_utilities/_extend.scss */
-.contacts__title {
+.best__heading, .contacts__title {
   font-family: 'Permanent Marker', 'Open Sans', cursive, sans-serif;
 }
 
@@ -730,13 +730,222 @@ picture {
   color: #ffffff;
 }
 
+/* line 3, src/scss/_components/_best.scss */
+.best {
+  position: relative;
+  padding-top: 328px;
+}
+
+/* line 7, src/scss/_components/_best.scss */
+.best__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+}
+
+/* line 16, src/scss/_components/_best.scss */
+.best__bg-wrapper {
+  width: 100%;
+  max-width: 485px;
+  padding-right: 30px;
+}
+
+/* line 23, src/scss/_components/_best.scss */
+.best__wrapper {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  max-width: -webkit-calc((100% / 2) + (485px / 3));
+  max-width: calc((100% / 2) + (485px / 3));
+  margin-left: auto;
+}
+
+/* line 31, src/scss/_components/_best.scss */
+.best__label {
+  padding-bottom: 50px;
+  font-size: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #a2a2a2;
+}
+
+/* line 39, src/scss/_components/_best.scss */
+.best__heading {
+  font-size: 55px;
+  color: #df9801;
+  line-height: 1.2;
+}
+
+/* line 46, src/scss/_components/_best.scss */
+.best__title {
+  padding-bottom: 40px;
+  text-align: left;
+}
+
+/* line 51, src/scss/_components/_best.scss */
+.best__desc {
+  padding-bottom: 100px;
+  font-size: 18px;
+  color: #000000;
+  line-height: 30px;
+}
+
+/* line 58, src/scss/_components/_best.scss */
+.best__block {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 406px;
+  -webkit-box-shadow: 19px 25px 49px 0 rgba(12, 12, 12, 0.38);
+          box-shadow: 19px 25px 49px 0 rgba(12, 12, 12, 0.38);
+  background-color: black;
+}
+
+/* line 66, src/scss/_components/_best.scss */
+.best__block-bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 79, src/scss/_components/_best.scss */
+.best__block-body {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: 18px;
+}
+
+/* line 89, src/scss/_components/_best.scss */
+.best__block-body p,
+.best__block-body span {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* line 96, src/scss/_components/_best.scss */
+.best__block-body span {
+  display: block;
+}
+
+/* line 103, src/scss/_components/_best.scss */
+.best .swiper-container {
+  padding: 50px 0 100px 50px;
+}
+
+/* line 107, src/scss/_components/_best.scss */
+.best .swiper-slide {
+  width: 310px !important;
+}
+
+/* line 111, src/scss/_components/_best.scss */
+.best .swiper-pagination {
+  z-index: 50;
+  outline: none;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 118, src/scss/_components/_best.scss */
+.best .swiper-pagination-bullet {
+  opacity: 1;
+  cursor: pointer;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: 2px solid #054d57;
+  margin-right: 20px;
+}
+
+/* line 128, src/scss/_components/_best.scss */
+.best .swiper-pagination-bullet:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #054d57;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 143, src/scss/_components/_best.scss */
+.best .swiper-pagination-bullet:hover:after {
+  -webkit-transform: scale(0.5);
+      -ms-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+/* line 149, src/scss/_components/_best.scss */
+.best .swiper-pagination-bullet:active, .best .swiper-pagination-bullet:focus {
+  outline: none;
+}
+
+/* line 155, src/scss/_components/_best.scss */
+.best .swiper-pagination-bullet-active:after {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
 /* line 3, src/scss/_components/_reviews.scss */
 .reviews {
-  padding-top: 50px;
   padding-bottom: 90px;
 }
 
-/* line 7, src/scss/_components/_reviews.scss */
+/* line 6, src/scss/_components/_reviews.scss */
 .reviews__block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -748,7 +957,7 @@ picture {
           align-items: center;
 }
 
-/* line 11, src/scss/_components/_reviews.scss */
+/* line 10, src/scss/_components/_reviews.scss */
 .reviews__block-left {
   display: -webkit-box;
   display: -webkit-flex;
@@ -767,12 +976,12 @@ picture {
           box-shadow: 8px 24px 40px 2px rgba(0, 0, 0, 0.16);
 }
 
-/* line 22, src/scss/_components/_reviews.scss */
+/* line 21, src/scss/_components/_reviews.scss */
 .reviews__block-left > div:nth-of-type(1) {
   width: 100px;
 }
 
-/* line 25, src/scss/_components/_reviews.scss */
+/* line 24, src/scss/_components/_reviews.scss */
 .reviews__block-left > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -783,20 +992,20 @@ picture {
   padding-top: 10px;
 }
 
-/* line 33, src/scss/_components/_reviews.scss */
+/* line 32, src/scss/_components/_reviews.scss */
 .reviews__block-left .icon-font {
   color: #df9801;
   font-size: 37px;
 }
 
-/* line 38, src/scss/_components/_reviews.scss */
+/* line 37, src/scss/_components/_reviews.scss */
 .reviews__block-left p {
   font-size: 18px;
   color: #000000;
   line-height: 30px;
 }
 
-/* line 45, src/scss/_components/_reviews.scss */
+/* line 44, src/scss/_components/_reviews.scss */
 .reviews__block-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -811,7 +1020,7 @@ picture {
   padding-left: 50px;
 }
 
-/* line 54, src/scss/_components/_reviews.scss */
+/* line 53, src/scss/_components/_reviews.scss */
 .reviews__user {
   display: -webkit-box;
   display: -webkit-flex;
@@ -824,7 +1033,7 @@ picture {
           flex-direction: column;
 }
 
-/* line 58, src/scss/_components/_reviews.scss */
+/* line 57, src/scss/_components/_reviews.scss */
 .reviews__user-head {
   overflow: hidden;
   position: relative;
@@ -835,12 +1044,12 @@ picture {
           border-radius: 50%;
 }
 
-/* line 71, src/scss/_components/_reviews.scss */
+/* line 70, src/scss/_components/_reviews.scss */
 .reviews__user-body {
   padding-top: 10px;
 }
 
-/* line 74, src/scss/_components/_reviews.scss */
+/* line 73, src/scss/_components/_reviews.scss */
 .reviews__user-body p,
 .reviews__user-body span {
   overflow: hidden;
@@ -849,7 +1058,7 @@ picture {
      text-overflow: ellipsis;
 }
 
-/* line 81, src/scss/_components/_reviews.scss */
+/* line 80, src/scss/_components/_reviews.scss */
 .reviews__user-body p {
   font-size: 25px;
   font-weight: 700;
@@ -857,13 +1066,13 @@ picture {
   line-height: 1;
 }
 
-/* line 88, src/scss/_components/_reviews.scss */
+/* line 87, src/scss/_components/_reviews.scss */
 .reviews__user-body span {
   font-size: 18px;
   color: #000000;
 }
 
-/* line 95, src/scss/_components/_reviews.scss */
+/* line 94, src/scss/_components/_reviews.scss */
 .reviews__action {
   display: -webkit-box;
   display: -webkit-flex;
@@ -879,13 +1088,13 @@ picture {
           justify-content: center;
 }
 
-/* line 101, src/scss/_components/_reviews.scss */
+/* line 100, src/scss/_components/_reviews.scss */
 .reviews__action > div:nth-of-type(2) {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/* line 108, src/scss/_components/_reviews.scss */
+/* line 107, src/scss/_components/_reviews.scss */
 .reviews__btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -893,7 +1102,7 @@ picture {
   display: flex;
 }
 
-/* line 112, src/scss/_components/_reviews.scss */
+/* line 111, src/scss/_components/_reviews.scss */
 .reviews__btn.swiper-button-disabled .icon-font {
   color: #878787;
   -webkit-transition: color 0.3s ease-in-out;
@@ -901,7 +1110,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 118, src/scss/_components/_reviews.scss */
+/* line 117, src/scss/_components/_reviews.scss */
 .reviews__btn .icon-font {
   font-size: 50px;
   color: #000000;
@@ -910,19 +1119,19 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 126, src/scss/_components/_reviews.scss */
+/* line 125, src/scss/_components/_reviews.scss */
 .reviews__btn--next .icon-font {
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-/* line 133, src/scss/_components/_reviews.scss */
+/* line 132, src/scss/_components/_reviews.scss */
 .reviews .swiper-container {
   padding: 50px;
 }
 
-/* line 137, src/scss/_components/_reviews.scss */
+/* line 136, src/scss/_components/_reviews.scss */
 .reviews .swiper-pagination {
   position: relative;
   bottom: 0;
@@ -938,14 +1147,14 @@ picture {
   color: #9a9a9a;
 }
 
-/* line 145, src/scss/_components/_reviews.scss */
+/* line 144, src/scss/_components/_reviews.scss */
 .reviews .swiper-pagination p {
   font-size: 33px;
   color: #000000;
   line-height: 1;
 }
 
-/* line 151, src/scss/_components/_reviews.scss */
+/* line 150, src/scss/_components/_reviews.scss */
 .reviews .swiper-pagination span {
   font-size: 20px;
   color: #9a9a9a;

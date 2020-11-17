@@ -11,7 +11,6 @@ const initSwiper = () => {
 
 	slideshow1Swiper = new Swiper('.slideshow1Swiper', {
     loop: true,
-    grabCursor: true,
     freeMode: true,
     effect: 'slide',
 		speed: 1000,
@@ -30,7 +29,6 @@ const initSwiper = () => {
 
 	slideshow2Swiper = new Swiper('.slideshow2Swiper', {
     loop: true,
-    grabCursor: true,
     freeMode: true,
     effect: 'slide',
 		speed: 1000,
@@ -48,11 +46,14 @@ const initSwiper = () => {
   });
 
 	new Swiper('.reviewsSwiper', {
-		speed: 1000,
-		grabCursor: true,
 		centeredSlides: true,
 		slidesPerView: 1,
 		spaceBetween: 0,
+		speed: 1000,
+		autoplay: {
+			delay: 10000,
+			disableOnInteraction: false,
+		},
 		effect: 'cube',
 		cubeEffect: {
 			shadow: false,
@@ -77,6 +78,22 @@ const initSwiper = () => {
 		navigation: {
 			nextEl: '.reviews__btn--next',
 			prevEl: '.reviews__btn--prev',
+		},
+	});
+
+	new Swiper('.bestSwiper', {
+		speed: 1000,
+		autoplay: {
+			delay: 7500,
+			disableOnInteraction: false,
+		},
+		slidesPerView: 'auto',
+		spaceBetween: 30,
+		slidesOffsetAfter: 30,
+		effect: 'slide',
+		pagination: {
+			el: '.best .swiper-pagination',
+			clickable: true
 		},
 	});
 };

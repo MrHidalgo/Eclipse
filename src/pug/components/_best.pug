@@ -1,0 +1,43 @@
+// SECTION :: START
+
+section#best.best
+
+	.best__bg
+		.c-grid
+			.best__bg-wrapper
+				p.best__label Choose
+				p.best__heading Best of the Best
+				p.best__title.c-title Eclipse Grow Tents
+				p.best__desc Eclipse Grow tents are a great way to help keep your plants relatively free of pests and diseases. Plants grown in an indoor plant tent can grow and thrive without insects and bugs.
+
+				.swiper-pagination
+	.best__wrapper
+
+		div
+			mixin swiperContent()
+				each val, idx in [1,2]
+					.swiper-slide
+						.best__block
+							.best__block-bg
+								img(src="img/img-best-1.png" srcset="img/img-best-1@2x.png 2x" alt="")
+							.best__block-body
+								p!= "Eclipse ELITE <br>Adjustable Height Grow Tent"
+								span 120cm x 120cm
+					.swiper-slide
+						.best__block
+							.best__block-bg
+								img(src="img/img-best-2.png" srcset="img/img-best-2@2x.png 2x" alt="")
+							.best__block-body
+								p!= "Eclipse <br>ELITE Grow Tents"
+								span 220 x 120 x 200cm
+					.swiper-slide
+						.best__block
+							.best__block-bg
+								img(src="img/img-best-3.png" srcset="img/img-best-3@2x.png 2x" alt="")
+							.best__block-body
+								p!= "Eclipse ELITE <br>Adjustable Height Grow Tent"
+								span 80cm x 80cm
+
+			+swiper('bestSwiper', 'swiperContent', false, false, false)
+
+// SECTION :: END
