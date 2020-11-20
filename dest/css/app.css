@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
-.setup__box-bg, .best__block-bg img, .reviews__user-head img, .slideshow .swiper-slide img {
+.why__block-head-img img, .setup__box-bg, .best__block-bg img, .reviews__user-head img, .slideshow .swiper-slide img {
   position: absolute;
   top: 0;
   left: 0;
@@ -733,6 +733,255 @@ picture {
   display: flex;
   font-size: 16px;
   color: #ffffff;
+}
+
+/* line 3, src/scss/_components/_why.scss */
+.why {
+  position: relative;
+  padding-top: 100px;
+}
+
+/* line 7, src/scss/_components/_why.scss */
+.why .c-grid {
+  max-width: 1470px;
+}
+
+/* line 11, src/scss/_components/_why.scss */
+.why__block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+/* line 16, src/scss/_components/_why.scss */
+.why__block-wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+/* line 22, src/scss/_components/_why.scss */
+.why__block-bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 80px;
+}
+
+/* line 34, src/scss/_components/_why.scss */
+.why__block-bg img {
+  display: block;
+  max-width: 490px;
+  height: auto;
+  max-height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 44, src/scss/_components/_why.scss */
+.why__block-col {
+  z-index: 2;
+  position: relative;
+  width: 50%;
+}
+
+/* line 49, src/scss/_components/_why.scss */
+.why__block-col-1 {
+  padding-left: 38px;
+}
+
+/* line 54, src/scss/_components/_why.scss */
+.why__block-col-1 .why__block-head-num {
+  top: -40px;
+  left: 62px;
+}
+
+/* line 59, src/scss/_components/_why.scss */
+.why__block-col-1 .why__block-body {
+  width: 100%;
+  max-width: 60%;
+  padding-left: 62px;
+}
+
+/* line 66, src/scss/_components/_why.scss */
+.why__block-col-2 {
+  padding-top: 176px;
+  padding-right: 32px;
+}
+
+/* line 70, src/scss/_components/_why.scss */
+.why__block-col-2 .why__block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+}
+
+/* line 77, src/scss/_components/_why.scss */
+.why__block-col-2 .why__block-head-num {
+  top: -40px;
+}
+
+/* line 82, src/scss/_components/_why.scss */
+.why__block-col-2 .why__block-body {
+  width: 100%;
+  max-width: 60%;
+  padding-right: 68px;
+}
+
+/* line 89, src/scss/_components/_why.scss */
+.why__block-col-3 {
+  position: relative;
+  top: -144px;
+  padding-left: 100px;
+}
+
+/* line 96, src/scss/_components/_why.scss */
+.why__block-col-3 .why__block-head-num {
+  top: -20px;
+  left: auto;
+  right: -25px;
+}
+
+/* line 103, src/scss/_components/_why.scss */
+.why__block-col-3 .why__block-body {
+  padding-right: 32px;
+}
+
+/* line 108, src/scss/_components/_why.scss */
+.why__block-col-4 {
+  padding-top: 10px;
+  padding-right: 100px;
+}
+
+/* line 112, src/scss/_components/_why.scss */
+.why__block-col-4 .why__block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+}
+
+/* line 118, src/scss/_components/_why.scss */
+.why__block-col-4 .why__block-head {
+  margin-right: auto;
+}
+
+/* line 121, src/scss/_components/_why.scss */
+.why__block-col-4 .why__block-head-num {
+  top: auto;
+  bottom: -60px;
+  left: 80px;
+}
+
+/* line 128, src/scss/_components/_why.scss */
+.why__block-col-4 .why__block-body {
+  position: relative;
+  top: -100px;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* line 138, src/scss/_components/_why.scss */
+.why__block-head {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+/* line 143, src/scss/_components/_why.scss */
+.why__block-head-img {
+  overflow: hidden;
+  z-index: 0;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-width: 5px;
+  border-color: #054d57;
+  border-style: solid;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #054d57;
+  -webkit-box-shadow: 26px 5px 43px 0 rgba(0, 0, 0, 0.16);
+          box-shadow: 26px 5px 43px 0 rgba(0, 0, 0, 0.16);
+}
+
+/* line 161, src/scss/_components/_why.scss */
+.why__block-head-num {
+  z-index: 5;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 100px;
+  color: #df9801;
+  line-height: 1;
+  font-weight: bold;
+}
+
+/* line 173, src/scss/_components/_why.scss */
+.why__block-body {
+  padding-top: 36px;
+}
+
+/* line 177, src/scss/_components/_why.scss */
+.why__block-title {
+  padding-bottom: 20px;
+  font-size: 25px;
+  color: #df9801;
+  font-weight: bold;
+}
+
+/* line 184, src/scss/_components/_why.scss */
+.why__block-desc {
+  font-size: 18px;
+  color: black;
 }
 
 /* line 3, src/scss/_components/_setup.scss */
