@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* line 14, src/scss/_utilities/_extend.scss */
-.ideal__box-head img, .why__block-head-img img, .setup__box-bg, .best__block-bg img, .reviews__user-head img, .slideshow .swiper-slide img {
+.main__bg-img img, .ideal__box-head img, .why__block-head-img img, .setup__box-bg, .best__block-bg img, .reviews__user-head img, .slideshow .swiper-slide img {
   position: absolute;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@ body {
 }
 
 /* line 29, src/scss/_utilities/_extend.scss */
-.setup__box-title, .best__heading, .contacts__title {
+.main__title, .setup__box-title, .best__heading, .contacts__title {
   font-family: 'Permanent Marker', 'Open Sans', cursive, sans-serif;
 }
 
@@ -733,6 +733,167 @@ picture {
   display: flex;
   font-size: 16px;
   color: #ffffff;
+}
+
+/* line 3, src/scss/_components/_main.scss */
+.main {
+  position: relative;
+  background: -webkit-gradient(linear, left top, left bottom, from(#001a28), to(#081412));
+  background: -webkit-linear-gradient(top, #001a28 0%, #081412 100%);
+  background: -o-linear-gradient(top, #001a28 0%, #081412 100%);
+  background: linear-gradient(to bottom, #001a28 0%, #081412 100%);
+}
+
+/* line 7, src/scss/_components/_main.scss */
+.main .c-grid {
+  max-width: 1470px;
+}
+
+/* line 11, src/scss/_components/_main.scss */
+.main__bg {
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 19, src/scss/_components/_main.scss */
+.main__bg-img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 26, src/scss/_components/_main.scss */
+.main__bg-img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: left bottom;
+     object-position: left bottom;
+}
+
+/* line 33, src/scss/_components/_main.scss */
+.main__bg-cover {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+}
+
+/* line 40, src/scss/_components/_main.scss */
+.main__bg-cover img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  -webkit-transform: translateY(185px);
+      -ms-transform: translateY(185px);
+          transform: translateY(185px);
+}
+
+/* line 49, src/scss/_components/_main.scss */
+.main__wrapper {
+  z-index: 2;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 384px;
+  padding-bottom: 399px;
+}
+
+/* line 56, src/scss/_components/_main.scss */
+.main__wrapper > div {
+  width: 100%;
+  max-width: 50%;
+}
+
+/* line 62, src/scss/_components/_main.scss */
+.main__title {
+  padding-bottom: 50px;
+  font-size: 70px;
+  color: #ffffff;
+}
+
+/* line 69, src/scss/_components/_main.scss */
+.main__desc {
+  padding-bottom: 100px;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+/* line 75, src/scss/_components/_main.scss */
+.main__btn {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* line 79, src/scss/_components/_main.scss */
+.main__btn a {
+  outline: none;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45px;
+  padding-left: 30px;
+  padding-right: 30px;
+  -webkit-border-radius: 10rem;
+          border-radius: 10rem;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 95, src/scss/_components/_main.scss */
+.main__btn a:hover {
+  background-color: #ffffff;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* line 99, src/scss/_components/_main.scss */
+.main__btn a:hover span {
+  color: #081412;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+/* line 105, src/scss/_components/_main.scss */
+.main__btn a span {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  -webkit-transition: color 0.3s ease-in-out;
+  -o-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 /* line 3, src/scss/_components/_ideal.scss */
