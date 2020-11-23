@@ -1,6 +1,9 @@
 // LOGOTYPE :: START
 
 .logo {
+	&.logo--header {
+		max-width: 188px;
+	}
 	&.logo--footer {
 		max-width: 118px;
 		padding-bottom: 23px;

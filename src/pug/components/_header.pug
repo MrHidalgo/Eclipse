@@ -1,7 +1,21 @@
 // HEADER :: START
 
 header#header.header
-	.c-grid
-		.header__wrapper
+
+	.header__wrapper
+		.header__wrapper-left
+
+			.logo.logo--light.logo--header
+				a.logo__btn(href="/")
+					+logo()
+
+		.header__wrapper-right
+
+			.header__nav
+				a.is-active(href="#") About Tents
+				a(href="#") Products
+				a(href="#") Delivery&Warranty
+				a(href="#") Gallary
+				a(href="#") Contact Us
 
 // HEADER :: END
