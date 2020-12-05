@@ -158,6 +158,10 @@
 				font-size: 15px;
 			}
 
+			a {
+				color: #ffffff;
+			}
+
 			& + p {
 				padding-top: 35px;
 				@include adaptive(1023) {

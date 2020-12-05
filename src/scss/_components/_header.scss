@@ -9,6 +9,89 @@
 	box-shadow: 0 5px 5px 0 rgba(#000, 0);
 	background-color: transparent;
 	@include transition(box-shadow, background-color);
+	@include adaptive(767) {
+		.is-hideScroll & {
+			box-shadow: 0 5px 10px 0 rgba(#000, 0.05);
+			background-color: rgba(#ffffff, 0.975);
+			@include transition(box-shadow, background-color);
+
+			.header {
+				&__wrapper {
+					padding-top: 5px;
+					padding-bottom: 5px;
+					@include transition(padding-top, padding-bottom);
+					@include adaptive(767) {
+						padding-top: 10px;
+						padding-bottom: 10px;
+					}
+
+					&-left {
+						.hamburger-inner,
+						.hamburger-inner::before,
+						.hamburger-inner::after {
+							background-color: #000;
+						}
+					}
+				}
+
+				&__nav {
+					a {
+						color: #1d1d1d;
+
+						&:before,
+						&:after {
+							background-color: #1d1d1d;
+						}
+					}
+				}
+			}
+
+			.logo {
+				&__img {
+					display: block;
+					width: 100%;
+					height: 100%;
+
+					&-curve {
+						@include transition(stroke);
+
+						&-1 {
+							stroke:#1d1d1b;
+						}
+						&-2 {
+							stroke:#1d1d1b;
+						}
+					}
+					&-circle {
+						&--left {
+							fill:#1d1d1b;
+							@include transition(fill);
+						}
+						&--middle {
+							stroke:#1d1d1b;
+							@include transition(stroke);
+						}
+						&--right {
+							stroke:#1d1d1b;
+							@include transition(stroke);
+						}
+					}
+					&-letter {
+						&--top {
+							fill:#fff;
+							stroke:#fff;
+							@include transition(fill, stroke);
+						}
+						&--bottom {
+							fill:#fff;
+							stroke:#1d1d1b;
+							@include transition(fill, stroke);
+						}
+					}
+				}
+			}
+		}
+	}
 
 	&.header--fixed {
 		box-shadow: 0 5px 10px 0 rgba(#000, 0.05);
@@ -20,6 +103,18 @@
 				padding-top: 5px;
 				padding-bottom: 5px;
 				@include transition(padding-top, padding-bottom);
+				@include adaptive(767) {
+					padding-top: 10px;
+					padding-bottom: 10px;
+				}
+
+				&-left {
+					.hamburger-inner,
+					.hamburger-inner::before,
+					.hamburger-inner::after {
+						background-color: #000;
+					}
+				}
 			}
 
 			&__nav {
@@ -86,11 +181,60 @@
 		justify-content: space-between;
 		padding: 30px;
 		@include transition(padding-top, padding-bottom);
+		@include adaptive(767) {
+			padding: 10px 20px;
+		}
+
+		&-left {
+			@include adaptive(767) {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+			}
+
+			.hamburger {
+				display: none;
+				@include adaptive(767) {
+					display: flex;
+				}
+			}
+		}
+
+		&-right {
+			@include adaptive(767) {
+				opacity: 0;
+				visibility: hidden;
+				transform: translateX(-100%);
+				z-index: 1999;
+				overflow-y: auto;
+				position: fixed;
+				top: 68px;
+				left: 0;
+				width: 100%;
+				height: calc(100% - 68px);
+				padding: 50px 20px;
+				border-top: 1px solid rgba(#000, 0.1);
+				background-color: #ffffff;
+				@include transition(opacity, visibility, transform);
+
+				&.is-open {
+					opacity: 1;
+					visibility: visible;
+					transform: translateX(0);
+					@include transition(opacity, visibility, transform);
+				}
+			}
+		}
 	}
 
 	&__nav {
 		display: flex;
 		align-items: center;
+		@include adaptive(767) {
+			align-items: flex-start;
+			flex-direction: column;
+		}
 
 		a {
 			position: relative;
@@ -99,6 +243,15 @@
 			font-size: 18px;
 			font-weight: 600;
 			@include transition(color);
+			@include adaptive(1023) {
+				font-size: 15px;
+			}
+			@include adaptive(767) {
+				align-items: center;
+				min-height: 40px;
+				margin-bottom: 10px;
+				font-size: 18px;
+			}
 
 			&:before,
 			&:after {
@@ -135,6 +288,9 @@
 
 			&:not(:last-of-type) {
 				margin-right: 50px;
+				@include adaptive(1023) {
+					margin-right: 30px;
+				}
 			}
 		}
 	}

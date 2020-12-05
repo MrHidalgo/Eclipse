@@ -3,6 +3,9 @@
 .logo {
 	&.logo--header {
 		max-width: 100px;
+		@include adaptive(767) {
+			max-width: 65px;
+		}
 	}
 	&.logo--footer {
 		max-width: 118px;

@@ -27,6 +27,13 @@
         @extend %imageResCoverAbs;
         object-fit: contain;
         object-position: left bottom;
+        @include adaptive(767) {
+          top: auto;
+          bottom: 0;
+          height: 75%;
+          object-fit: cover;
+          object-position: right bottom;
+        }
       }
     }
 
@@ -36,6 +43,11 @@
       right: 0;
       width: 50%;
       height: 100%;
+      @include adaptive(767) {
+        display: flex;
+        align-items: flex-end;
+        width: 80%;
+      }
 
       img {
         position: relative;
@@ -45,6 +57,9 @@
         height: auto;
         max-height: 100%;
         margin-left: auto;
+        @include adaptive(767) {
+          top: 30px;
+        }
       }
     }
   }
@@ -57,10 +72,20 @@
     min-height: 100vh;
     padding-top: 100px;
     padding-bottom: 100px;
+    @include adaptive(1023) {
+      min-height: 90vh;
+    }
+    @include adaptive(767) {
+      height: auto;
+      padding-bottom: 300px;
+    }
 
     > div {
       width: 100%;
       max-width: 50%;
+      @include adaptive(767) {
+        max-width: 75%;
+      }
     }
   }
 
@@ -69,12 +94,23 @@
     @extend %fontPermanentMarker;
     font-size: 65px;
     color: #ffffff;
+    @include adaptive(1279) {
+      font-size: 55px;
+    }
+    @include adaptive(767) {
+      padding-bottom: 25px;
+      font-size: 35px;
+    }
   }
 
   &__desc {
     padding-bottom: 80px;
     font-size: 20px;
     color: #ffffff;
+    @include adaptive(767) {
+      padding-bottom: 50px;
+      font-size: 15px;
+    }
   }
 
   &__btn {
@@ -96,6 +132,11 @@
       border-color: rgb(255, 255, 255);
       background-color: transparent;
       @include transition(background-color);
+      @include adaptive(767) {
+        height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
 
       &:hover {
         background-color: #ffffff;
@@ -113,6 +154,9 @@
         font-weight: 600;
         line-height: 1;
         @include transition(color);
+        @include adaptive(767) {
+          font-size: 15px;
+        }
       }
     }
   }

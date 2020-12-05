@@ -5,11 +5,13 @@ header#header.header
 	.header__wrapper
 		.header__wrapper-left
 
+			+hamburger()
+
 			.logo.logo--light.logo--header
 				a.logo__btn(href="/")
 					+logo()
 
-		.header__wrapper-right
+		.header__wrapper-right(mobile-block-js)
 
 			.header__nav
 				a.is-active(href="#main" anchor-js) Home
