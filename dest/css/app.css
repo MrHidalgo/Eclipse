@@ -1404,12 +1404,40 @@ picture {
   padding-top: 125px;
 }
 
-/* line 6, src/scss/_components/_ideal.scss */
+@media screen and (max-width: 1279px) {
+  /* line 3, src/scss/_components/_ideal.scss */
+  .ideal {
+    padding-top: 100px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 3, src/scss/_components/_ideal.scss */
+  .ideal {
+    padding-top: 75px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_components/_ideal.scss */
+  .ideal {
+    padding-top: 25px;
+  }
+}
+
+/* line 15, src/scss/_components/_ideal.scss */
 .ideal__title {
   padding-bottom: 40px;
 }
 
-/* line 10, src/scss/_components/_ideal.scss */
+@media screen and (max-width: 767px) {
+  /* line 15, src/scss/_components/_ideal.scss */
+  .ideal__title {
+    padding-bottom: 25px;
+  }
+}
+
+/* line 22, src/scss/_components/_ideal.scss */
 .ideal__desc {
   padding-bottom: 30px;
   text-align: center;
@@ -1417,7 +1445,15 @@ picture {
   line-height: 1.6;
 }
 
-/* line 17, src/scss/_components/_ideal.scss */
+@media screen and (max-width: 767px) {
+  /* line 22, src/scss/_components/_ideal.scss */
+  .ideal__desc {
+    padding-bottom: 25px;
+    font-size: 15px;
+  }
+}
+
+/* line 33, src/scss/_components/_ideal.scss */
 .ideal__box {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1434,7 +1470,7 @@ picture {
           box-shadow: 0 8px 15px 0 rgba(12, 13, 12, 0.1);
 }
 
-/* line 24, src/scss/_components/_ideal.scss */
+/* line 40, src/scss/_components/_ideal.scss */
 .ideal__box-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1447,7 +1483,23 @@ picture {
   padding-top: 20px;
 }
 
-/* line 29, src/scss/_components/_ideal.scss */
+@media screen and (max-width: 767px) {
+  /* line 40, src/scss/_components/_ideal.scss */
+  .ideal__box-wrapper {
+    overflow-x: auto;
+    white-space: nowrap;
+    position: relative;
+    left: -20px;
+    width: -webkit-calc(100% + 40px);
+    width: calc(100% + 40px);
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 0;
+  }
+}
+
+/* line 56, src/scss/_components/_ideal.scss */
 .ideal__box-wrapper > div {
   width: 100%;
   max-width: -webkit-calc((100% - 200px) / 3);
@@ -1455,7 +1507,32 @@ picture {
   padding-bottom: 50px;
 }
 
-/* line 36, src/scss/_components/_ideal.scss */
+@media screen and (max-width: 1279px) {
+  /* line 56, src/scss/_components/_ideal.scss */
+  .ideal__box-wrapper > div {
+    max-width: -webkit-calc((100% - 100px) / 3);
+    max-width: calc((100% - 100px) / 3);
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 56, src/scss/_components/_ideal.scss */
+  .ideal__box-wrapper > div {
+    max-width: -webkit-calc((100% - 50px) / 3);
+    max-width: calc((100% - 50px) / 3);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 56, src/scss/_components/_ideal.scss */
+  .ideal__box-wrapper > div {
+    min-width: 275px;
+    max-width: unset;
+    margin-right: 20px;
+  }
+}
+
+/* line 74, src/scss/_components/_ideal.scss */
 .ideal__box-head {
   overflow: hidden;
   position: relative;
@@ -1463,20 +1540,35 @@ picture {
   height: 300px;
 }
 
-/* line 47, src/scss/_components/_ideal.scss */
+@media screen and (max-width: 1023px) {
+  /* line 74, src/scss/_components/_ideal.scss */
+  .ideal__box-head {
+    height: 200px;
+  }
+}
+
+/* line 88, src/scss/_components/_ideal.scss */
 .ideal__box-body {
   padding: 30px 15px 15px;
   text-align: center;
 }
 
-/* line 52, src/scss/_components/_ideal.scss */
+@media screen and (max-width: 767px) {
+  /* line 88, src/scss/_components/_ideal.scss */
+  .ideal__box-body {
+    white-space: normal;
+    padding-top: 25px;
+  }
+}
+
+/* line 97, src/scss/_components/_ideal.scss */
 .ideal__box-title {
   padding-bottom: 15px;
   font-size: 22px;
   color: #054d57;
 }
 
-/* line 58, src/scss/_components/_ideal.scss */
+/* line 103, src/scss/_components/_ideal.scss */
 .ideal__box-desc {
   display: block;
   width: 85%;
@@ -1486,7 +1578,7 @@ picture {
   color: #000000;
 }
 
-/* line 68, src/scss/_components/_ideal.scss */
+/* line 113, src/scss/_components/_ideal.scss */
 .ideal__container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1505,7 +1597,7 @@ picture {
   background-color: #f3f3f3;
 }
 
-/* line 76, src/scss/_components/_ideal.scss */
+/* line 121, src/scss/_components/_ideal.scss */
 .ideal__container-title {
   font-size: 16px;
   color: #000000;
@@ -1513,7 +1605,7 @@ picture {
   text-align: center;
 }
 
-/* line 82, src/scss/_components/_ideal.scss */
+/* line 127, src/scss/_components/_ideal.scss */
 .ideal__container-title strong {
   font-weight: 700;
 }
