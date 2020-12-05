@@ -67,6 +67,10 @@ const initSwiper = () => {
 		spaceBetween: 30,
 		speed: 850,
 		effect: 'slide',
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+		},
 		pagination: {
 			el: '.reviews .swiper-pagination',
 			type: 'fraction',
