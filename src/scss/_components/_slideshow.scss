@@ -3,6 +3,11 @@
 .slideshow {
 	position: relative;
 	height: calc(100vh - 80px);
+	@include adaptive(767) {
+		height: auto;
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
 
 	&__gallery {
 		z-index: -99999;
@@ -14,6 +19,43 @@
 	&__wrapper {
 		height: calc((100vh - (80px + 93px)) / 2);
 		padding-top: 30px;
+		@include adaptive(767) {
+			height: auto;
+			padding-top: 0;
+		}
+
+		&-1 {
+			@include adaptive(767) {
+				height: 100px;
+				padding-bottom: 25px;
+
+				.swiper {
+					&-slide {
+						width: 40% !important;
+					}
+				}
+			}
+		}
+
+		&-2 {
+			@include adaptive(767) {
+				height: 360px;
+
+				.swiper {
+					&-slide {
+						width: 100% !important;
+					}
+				}
+			}
+		}
+	}
+
+	&__title {
+		display: none;
+		padding-bottom: 25px;
+		@include adaptive(767) {
+			display: block;
+		}
 	}
 
 	.swiper {
@@ -40,23 +82,39 @@
 	&__preview {
 		display: flex;
 		align-items: center;
+		@include adaptive(767) {
+			justify-content: center;
+		}
 
 		&-wrapper {
 			display: flex;
 			justify-content: center;
 			padding-top: 30px;
 			padding-bottom: 30px;
+			@include adaptive(767) {
+				padding-top: 25px;
+				padding-bottom: 25px;
+			}
 		}
 
 		.icon-font {
 			margin-right: 10px;
 			font-size: 33px;
 			color: #000000;
+			@include adaptive(767) {
+				display: none;
+			}
 		}
 
 		p {
 			color: #000000;
 			font-size: 16px;
+			@include adaptive(767) {
+				padding-left: 20px;
+				padding-right: 20px;
+				font-size: 15px;
+				text-align: center;
+			}
 
 			span {
 				color: #e5b44c;

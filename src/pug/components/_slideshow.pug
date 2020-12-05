@@ -10,19 +10,21 @@ section#slideshow.slideshow(popup-gallery-js)
 		a.swiper-slide-link(href="img/img-slideshow-big-2@2x.png" title='Some image title')
 		a.swiper-slide-link(href="img/img-slideshow-medium-2@2x.png" title='Some image title')
 
+	p.slideshow__title.c-title Gallery
+
 	.slideshow__wrapper.slideshow__wrapper-1
 
 		// small width - 366px
 		// medium width - 568px
 		// big width - 768px
 		mixin swiperContent()
-			.swiper-slide(style='width:768px;')
+			.swiper-slide.swiper-slide--big(style='width:768px;')
 				a.swiper-slide-link(href="img/img-slideshow-big-1@2x.png" data-effect='mfp-zoom-in' title='Some image title')
 					img(src="img/img-slideshow-big-1.png" srcset="img/img-slideshow-big-1@2x.png 2x" alt="")
-			.swiper-slide(style='width:366px;')
+			.swiper-slide.swiper-slide--small(style='width:366px;')
 				a.swiper-slide-link(href="img/img-slideshow-small-1@2x.png" data-effect='mfp-zoom-in' title='Some image title')
 					img(src="img/img-slideshow-small-1.png" srcset="img/img-slideshow-small-1@2x.png 2x" alt="")
-			.swiper-slide(style='width:568px;')
+			.swiper-slide.swiper-slide--medium(style='width:568px;')
 				a.swiper-slide-link(href="img/img-slideshow-medium-1@2x.png" data-effect='mfp-zoom-in' title='Some image title')
 					img(src="img/img-slideshow-medium-1.png" srcset="img/img-slideshow-medium-1@2x.png 2x" alt="")
 

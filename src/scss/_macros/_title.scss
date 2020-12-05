@@ -5,6 +5,9 @@
 	color: rgb(5, 77, 87);
 	font-weight: bold;
 	text-align: center;
+	@include adaptive(767) {
+		font-size: 30px;
+	}
 }
 
 // TITLE :: END

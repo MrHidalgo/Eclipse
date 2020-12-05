@@ -10,16 +10,24 @@ const initSwiper = () => {
 		slideshow2Swiper = null;
 
 	slideshow1Swiper = new Swiper('.slideshow1Swiper', {
-    loop: true,
+    // loop: true,
     freeMode: true,
     effect: 'slide',
-		speed: 850,
+		speed: 1000,
     autoplay: {
-      delay: 5000,
+      delay: 4500,
 	    disableOnInteraction: false,
     },
     slidesPerView: 'auto',
     spaceBetween: 30,
+		breakpoints: {
+			280: {
+				spaceBetween: 5
+			},
+			768: {
+				spaceBetween: 30
+			},
+		},
     on: {
       "init": function () {
         $(this.$el).css({opacity: 1});
@@ -28,16 +36,24 @@ const initSwiper = () => {
   });
 
 	slideshow2Swiper = new Swiper('.slideshow2Swiper', {
-    loop: true,
+    // loop: true,
     freeMode: true,
     effect: 'slide',
-		speed: 850,
+		speed: 1000,
     autoplay: {
-      delay: 5000,
+      delay: 4500,
 	    disableOnInteraction: false,
     },
     slidesPerView: 'auto',
     spaceBetween: 30,
+		breakpoints: {
+			280: {
+				spaceBetween: 5
+			},
+			768: {
+				spaceBetween: 30
+			},
+		},
     on: {
       "init": function () {
         $(this.$el).css({opacity: 1});
