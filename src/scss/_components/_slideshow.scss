@@ -5,8 +5,8 @@
 	height: calc(100vh - 80px);
 	@include adaptive(767) {
 		height: auto;
-		padding-top: 25px;
-		padding-bottom: 25px;
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 
 	&__gallery {
@@ -55,6 +55,7 @@
 		padding-bottom: 25px;
 		@include adaptive(767) {
 			display: block;
+			padding-bottom: 50px;
 		}
 	}
 

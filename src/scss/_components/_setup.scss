@@ -40,7 +40,7 @@
 
 			.social {
 				display: none;
-				padding-top: 25px;
+				padding-top: 50px;
 				@include adaptive(767) {
 					display: flex;
 				}
@@ -146,6 +146,9 @@
 		padding-bottom: 40px;
 		color: #df9801;
 		text-align: left;
+		@include adaptive(767) {
+			padding-bottom: 25px;
+		}
 	}
 
 	&__desc {
@@ -153,8 +156,9 @@
 		color: #fff;
 		font-size: 16px;
 		@include adaptive(767) {
-			padding-bottom: 0;
+			padding-bottom: 25px;
 			font-size: 15px;
+			line-height: 1.6;
 		}
 	}
 }

@@ -7,7 +7,8 @@
 		padding-top: 200px;
 	}
 	@include adaptive(767) {
-		padding-top: 25px;
+		padding-top: 50px;
+		padding-bottom: 25px;
 	}
 
 	&__bg {
@@ -95,6 +96,7 @@
 		@include adaptive(767) {
 			padding-bottom: 25px;
 			font-size: 15px;
+			line-height: 1.6;
 		}
 	}
 

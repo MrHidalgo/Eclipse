@@ -9,7 +9,7 @@
 		padding-top: 75px;
 	}
 	@include adaptive(767) {
-		padding-top: 25px;
+		padding-top: 50px;
 	}
 
 	&__title {
@@ -98,6 +98,9 @@
 			padding-bottom: 15px;
 			font-size: 22px;
 			color: #054d57;
+			@include adaptive(767) {
+				font-size: 20px;
+			}
 		}
 
 		&-desc {
@@ -107,6 +110,10 @@
 			margin-right: auto;
 			font-size: 16px;
 			color: #000000;
+			@include adaptive(767) {
+				font-size: 15px;
+				line-height: 1.6;
+			}
 		}
 	}
 
@@ -117,12 +124,19 @@
 		padding-top: 40px;
 		padding-bottom: 40px;
 		background-color: #f3f3f3;
+		@include adaptive(767) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
 
 		&-title {
 			font-size: 16px;
 			color: #000000;
 			line-height: 1.6;
 			text-align: center;
+			@include adaptive(767) {
+				font-size: 15px;
+			}
 
 			strong {
 				font-weight: 700;
