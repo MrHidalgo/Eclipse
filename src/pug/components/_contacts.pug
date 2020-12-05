@@ -4,18 +4,18 @@ section#contacts.contacts
 	.c-grid
 		.contacts__wrapper
 
-			p.contacts__title Get in Touch
+			p.contacts__title(data-aos="fade-up") Get in Touch
 
-			p.contacts__desc!= "If you have any questions or need a consultation, fill out the feedback form. <br>We will be glad to help you get the answers you need. <br>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals"
+			p.contacts__desc(data-aos="fade-up")!= "If you have any questions or need a consultation, fill out the feedback form. <br>We will be glad to help you get the answers you need. <br>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals"
 
 			form.contacts__form(action='' method='' autocomplete='off')
-				.contacts__form-field.contacts__form-field--input
+				.contacts__form-field.contacts__form-field--input(data-aos="fade-up")
 					input(type='text' name='' placeholder='Your Name')
-				.contacts__form-field.contacts__form-field--input
+				.contacts__form-field.contacts__form-field--input(data-aos="fade-up")
 					input(type='text' name='' placeholder='E-mail')
-				.contacts__form-field.contacts__form-field--textarea
+				.contacts__form-field.contacts__form-field--textarea(data-aos="fade-up")
 					textarea(placeholder='Messages')
-				.contacts__form-field.contacts__form-field--btn
+				.contacts__form-field.contacts__form-field--btn(data-aos="fade-up")
 					button(type='submit')
 						span Send Message
 

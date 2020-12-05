@@ -35,6 +35,55 @@
 			}
 		});
 	};
+	
+	
+	const pathFloatingAnimation = () => {
+		let xMin = -25,
+			xMax = 25,
+			yMin = -5,
+			yMax = 5,
+			positionsPerElement = 5,
+			secondsPerIteration = 5,
+			elements = $("[floating-node-js]");
+		
+		for (let i = 0; i < elements.length; i++) {
+			randomFloat(elements[i], positionsPerElement, secondsPerIteration);
+		}
+		
+		function random(min, max) {
+			return min + Math.random() * (max - min);
+		}
+		
+		function randomFloat(element, positions, duration) {
+			let tl = new TimelineMax({
+				repeat: -1,
+				yoyo: true,
+				delay: Math.random() * duration
+			});
+			
+			for (let _i = 0; _i < positions; _i++) {
+				tl.to(element, duration, {
+					x: random(xMin, xMax),
+					y: random(yMin, yMax),
+					ease: Sine.easeInOut
+				});
+			}
+			
+			return tl;
+		}
+	};
+	
+	
+	const viewportAnimation = () => {
+		AOS.init({
+			offset: 120,
+			delay: 50,
+			duration: 800,
+			easing: 'ease-in-out-cubic',
+			mirror: false,
+			once: true
+		});
+	};
 	/*
 	* CALLBACK :: end
 	* ============================================= */
@@ -55,12 +104,15 @@
 		initPopups();
 		initSmoothScroll();
 		initHamburger();
+		initStellar();
 		// ==========================================
 
 		// callback
 		slideShowPreview();
 		headerNav();
 		footerCollapse();
+		pathFloatingAnimation();
+		viewportAnimation();
 		// ==========================================
 	};
 	initNative();

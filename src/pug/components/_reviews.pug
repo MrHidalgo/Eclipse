@@ -4,9 +4,9 @@ section#reviews.reviews
 	.c-grid
 		.reviews__wrapper
 
-			p.reviews__title.c-title What Our Clients Says
+			p.reviews__title.c-title(data-aos="fade-up") What Our Clients Says
 
-			.reviews__slider
+			.reviews__slider(data-aos="fade-up")
 
 				mixin swiperContent()
 					each val, idx in [1,2,3,4,5]
@@ -29,7 +29,7 @@ section#reviews.reviews
 
 				+swiper('reviewsSwiper', 'swiperContent', false, false, false)
 
-			.reviews__action
+			.reviews__action(data-aos="fade-up")
 				div
 					a.reviews__btn.reviews__btn--prev(href="#")
 						i.icon-font.icon-left-arrow

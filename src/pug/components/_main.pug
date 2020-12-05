@@ -4,17 +4,18 @@ section#main.main
 
 	.main__bg
 		.main__bg-img
-			img(src="img/img-main-bg-1.png" alt="")
-			img(src="img/img-main-bg-2.png" alt="")
-			img(src="img/img-main-bg-3.png" alt="")
-			
-		.main__bg-cover
+			img(src="img/img-main-bg-1.png" alt="" floating-node-js)
+			img(src="img/img-main-bg-2.png" alt="" floating-node-js)
+			img(src="img/img-main-bg-3.png" alt="" floating-node-js)
+
+	.main__bg.main__bg--cover
+		.main__bg-cover(data-stellar-ratio="1.1" parallax-js)
 			img(src="img/img-main-box.png" alt="")
 
 	.c-grid
 		.main__wrapper
 
-			div
+			div(data-aos="fade-in")
 
 				p.main__title eclipse grow tents
 				p.main__desc!= "A year-round solution to raising seeds and <br>tending to your precious plants until maturity"

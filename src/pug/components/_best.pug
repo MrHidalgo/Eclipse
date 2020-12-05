@@ -4,16 +4,17 @@ section#best.best
 
 	.best__bg
 		.c-grid
-			.best__bg-wrapper
+			.best__bg-wrapper(data-aos="fade-up")
 				p.best__label Choose
 				p.best__heading Best of the Best
 				p.best__title.c-title Eclipse Grow Tents
 				p.best__desc Eclipse Grow tents are a great way to help keep your plants relatively free of pests and diseases. Plants grown in an indoor plant tent can grow and thrive without insects and bugs.
 
 				.swiper-pagination
+
 	.best__wrapper
 
-		div
+		div(data-aos="fade-left")
 			mixin swiperContent()
 				each val, idx in [1,2]
 					.swiper-slide
