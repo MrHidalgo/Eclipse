@@ -3,6 +3,10 @@
 .contacts {
 	padding-top: 80px;
 	padding-bottom: 80px;
+	@include adaptive(767) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
 
 	&__title {
 		padding-bottom: 20px;
@@ -11,6 +15,12 @@
 		color: rgb(5, 77, 87);
 		line-height: 1.2;
 		text-align: center;
+		@include adaptive(1279) {
+			font-size: 40px;
+		}
+		@include adaptive(767) {
+			font-size: 33px;
+		}
 	}
 
 	&__desc {
@@ -19,6 +29,14 @@
 		color: rgb(0, 0, 0);
 		line-height: 1.667;
 		text-align: center;
+		@include adaptive(1023) {
+			padding-bottom: 25px;
+			font-size: 15px;
+
+			br {
+				display: none;
+			}
+		}
 	}
 
 	&__form {
@@ -33,6 +51,9 @@
 		&-field {
 			width: 100%;
 			padding-bottom: 33px;
+			@include adaptive(767) {
+				padding-bottom: 25px;
+			}
 
 			&--btn {
 				display: flex;
@@ -69,12 +90,18 @@
 		input {
 			height: 55px;
 			padding: 0 20px;
+			@include adaptive(767) {
+				height: 50px;
+			}
 		}
 
 		textarea {
 			resize: none;
 			height: 130px;
 			padding: 20px;
+			@include adaptive(767) {
+				height: 115px;
+			}
 		}
 
 		button {
@@ -96,6 +123,11 @@
 			line-height: 1.2;
 			text-align: center;
 			@include transition(background-color);
+			@include adaptive(767) {
+				height: 50px;
+				min-width: 200px;
+				font-size: 15px;
+			}
 
 			&:hover {
 				background-color: rgb(5, 77, 87);
