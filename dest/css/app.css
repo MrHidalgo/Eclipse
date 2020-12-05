@@ -2136,7 +2136,23 @@ picture {
   padding-bottom: 75px;
 }
 
-/* line 7, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 767px) {
+  /* line 3, src/scss/_components/_reviews.scss */
+  .reviews {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 11, src/scss/_components/_reviews.scss */
+  .reviews .c-grid {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+/* line 18, src/scss/_components/_reviews.scss */
 .reviews__block {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2148,7 +2164,20 @@ picture {
           align-items: center;
 }
 
-/* line 11, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 767px) {
+  /* line 18, src/scss/_components/_reviews.scss */
+  .reviews__block {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    padding: 20px;
+    -webkit-box-shadow: 0 8px 15px 0 rgba(12, 13, 12, 0.1);
+            box-shadow: 0 8px 15px 0 rgba(12, 13, 12, 0.1);
+    background-color: #f3f3f3;
+  }
+}
+
+/* line 28, src/scss/_components/_reviews.scss */
 .reviews__block-left {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2162,17 +2191,52 @@ picture {
   max-width: 100%;
   min-height: 192px;
   padding: 39px 80px 30px 55px;
-  background-color: #f3f3f3;
   -webkit-box-shadow: 0 8px 15px 0 rgba(12, 13, 12, 0.1);
           box-shadow: 0 8px 15px 0 rgba(12, 13, 12, 0.1);
+  background-color: #f3f3f3;
 }
 
-/* line 22, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 1023px) {
+  /* line 28, src/scss/_components/_reviews.scss */
+  .reviews__block-left {
+    padding: 30px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 28, src/scss/_components/_reviews.scss */
+  .reviews__block-left {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    background-color: transparent;
+  }
+}
+
+/* line 49, src/scss/_components/_reviews.scss */
 .reviews__block-left > div:nth-of-type(1) {
   width: 100px;
 }
 
-/* line 25, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 1023px) {
+  /* line 49, src/scss/_components/_reviews.scss */
+  .reviews__block-left > div:nth-of-type(1) {
+    width: 75px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 49, src/scss/_components/_reviews.scss */
+  .reviews__block-left > div:nth-of-type(1) {
+    width: 100%;
+  }
+}
+
+/* line 58, src/scss/_components/_reviews.scss */
 .reviews__block-left > div:nth-of-type(2) {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -2183,20 +2247,42 @@ picture {
   padding-top: 10px;
 }
 
-/* line 33, src/scss/_components/_reviews.scss */
+/* line 66, src/scss/_components/_reviews.scss */
 .reviews__block-left .icon-font {
   color: #df9801;
   font-size: 37px;
 }
 
-/* line 38, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 1023px) {
+  /* line 66, src/scss/_components/_reviews.scss */
+  .reviews__block-left .icon-font {
+    font-size: 33px;
+  }
+}
+
+/* line 74, src/scss/_components/_reviews.scss */
 .reviews__block-left p {
   font-size: 18px;
   color: #000000;
   line-height: 30px;
 }
 
-/* line 45, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 1023px) {
+  /* line 74, src/scss/_components/_reviews.scss */
+  .reviews__block-left p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 74, src/scss/_components/_reviews.scss */
+  .reviews__block-left p {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+/* line 88, src/scss/_components/_reviews.scss */
 .reviews__block-right {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2211,7 +2297,34 @@ picture {
   padding-left: 50px;
 }
 
-/* line 54, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 1279px) {
+  /* line 88, src/scss/_components/_reviews.scss */
+  .reviews__block-right {
+    padding-left: 25px;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 88, src/scss/_components/_reviews.scss */
+  .reviews__block-right {
+    max-width: 200px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  /* line 88, src/scss/_components/_reviews.scss */
+  .reviews__block-right {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    max-width: 100%;
+    padding-top: 25px;
+    padding-left: 0;
+  }
+}
+
+/* line 109, src/scss/_components/_reviews.scss */
 .reviews__user {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2224,7 +2337,22 @@ picture {
           flex-direction: column;
 }
 
-/* line 58, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 767px) {
+  /* line 109, src/scss/_components/_reviews.scss */
+  .reviews__user {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+/* line 117, src/scss/_components/_reviews.scss */
 .reviews__user-head {
   overflow: hidden;
   position: relative;
@@ -2235,12 +2363,21 @@ picture {
           border-radius: 50%;
 }
 
-/* line 71, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 767px) {
+  /* line 117, src/scss/_components/_reviews.scss */
+  .reviews__user-head {
+    width: 75px;
+    height: 75px;
+    padding-left: 25px;
+  }
+}
+
+/* line 135, src/scss/_components/_reviews.scss */
 .reviews__user-body {
   padding-top: 10px;
 }
 
-/* line 74, src/scss/_components/_reviews.scss */
+/* line 138, src/scss/_components/_reviews.scss */
 .reviews__user-body p,
 .reviews__user-body span {
   overflow: hidden;
@@ -2249,7 +2386,7 @@ picture {
      text-overflow: ellipsis;
 }
 
-/* line 81, src/scss/_components/_reviews.scss */
+/* line 145, src/scss/_components/_reviews.scss */
 .reviews__user-body p {
   font-size: 22px;
   font-weight: 700;
@@ -2257,13 +2394,30 @@ picture {
   line-height: 1;
 }
 
-/* line 88, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 767px) {
+  /* line 145, src/scss/_components/_reviews.scss */
+  .reviews__user-body p {
+    font-size: 20px;
+    text-align: right;
+  }
+}
+
+/* line 156, src/scss/_components/_reviews.scss */
 .reviews__user-body span {
   font-size: 16px;
   color: #000000;
 }
 
-/* line 95, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 767px) {
+  /* line 156, src/scss/_components/_reviews.scss */
+  .reviews__user-body span {
+    display: block;
+    font-size: 15px;
+    text-align: right;
+  }
+}
+
+/* line 168, src/scss/_components/_reviews.scss */
 .reviews__action {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2279,13 +2433,13 @@ picture {
           justify-content: center;
 }
 
-/* line 101, src/scss/_components/_reviews.scss */
+/* line 174, src/scss/_components/_reviews.scss */
 .reviews__action > div:nth-of-type(2) {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/* line 108, src/scss/_components/_reviews.scss */
+/* line 181, src/scss/_components/_reviews.scss */
 .reviews__btn {
   display: -webkit-box;
   display: -webkit-flex;
@@ -2293,7 +2447,7 @@ picture {
   display: flex;
 }
 
-/* line 112, src/scss/_components/_reviews.scss */
+/* line 185, src/scss/_components/_reviews.scss */
 .reviews__btn.swiper-button-disabled .icon-font {
   color: #878787;
   -webkit-transition: color 0.3s ease-in-out;
@@ -2301,7 +2455,7 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 118, src/scss/_components/_reviews.scss */
+/* line 191, src/scss/_components/_reviews.scss */
 .reviews__btn .icon-font {
   font-size: 50px;
   color: #000000;
@@ -2310,19 +2464,33 @@ picture {
   transition: color 0.3s ease-in-out;
 }
 
-/* line 125, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 1279px) {
+  /* line 191, src/scss/_components/_reviews.scss */
+  .reviews__btn .icon-font {
+    font-size: 35px;
+  }
+}
+
+/* line 201, src/scss/_components/_reviews.scss */
 .reviews__btn--next .icon-font {
   -webkit-transform: scaleX(-1);
       -ms-transform: scaleX(-1);
           transform: scaleX(-1);
 }
 
-/* line 132, src/scss/_components/_reviews.scss */
+/* line 208, src/scss/_components/_reviews.scss */
 .reviews .swiper-container {
   padding: 30px 15px;
 }
 
-/* line 136, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 767px) {
+  /* line 208, src/scss/_components/_reviews.scss */
+  .reviews .swiper-container {
+    padding: 25px 20px;
+  }
+}
+
+/* line 215, src/scss/_components/_reviews.scss */
 .reviews .swiper-pagination {
   position: relative;
   bottom: 0;
@@ -2338,17 +2506,31 @@ picture {
   color: #9a9a9a;
 }
 
-/* line 144, src/scss/_components/_reviews.scss */
+/* line 223, src/scss/_components/_reviews.scss */
 .reviews .swiper-pagination p {
   font-size: 33px;
   color: #000000;
   line-height: 1;
 }
 
-/* line 150, src/scss/_components/_reviews.scss */
+@media screen and (max-width: 1023px) {
+  /* line 223, src/scss/_components/_reviews.scss */
+  .reviews .swiper-pagination p {
+    font-size: 30px;
+  }
+}
+
+/* line 232, src/scss/_components/_reviews.scss */
 .reviews .swiper-pagination span {
   font-size: 20px;
   color: #9a9a9a;
+}
+
+@media screen and (max-width: 1023px) {
+  /* line 232, src/scss/_components/_reviews.scss */
+  .reviews .swiper-pagination span {
+    font-size: 18px;
+  }
 }
 
 /* line 3, src/scss/_components/_delivery.scss */
