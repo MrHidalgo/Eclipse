@@ -13,13 +13,13 @@ const initSwiper = () => {
     loop: true,
     freeMode: true,
     effect: 'slide',
-		speed: 1000,
+		speed: 850,
     autoplay: {
       delay: 5000,
 	    disableOnInteraction: false,
     },
     slidesPerView: 'auto',
-    spaceBetween: 35,
+    spaceBetween: 30,
     on: {
       "init": function () {
         $(this.$el).css({opacity: 1});
@@ -31,13 +31,13 @@ const initSwiper = () => {
     loop: true,
     freeMode: true,
     effect: 'slide',
-		speed: 1000,
+		speed: 850,
     autoplay: {
       delay: 5000,
 	    disableOnInteraction: false,
     },
     slidesPerView: 'auto',
-    spaceBetween: 35,
+    spaceBetween: 30,
     on: {
       "init": function () {
         $(this.$el).css({opacity: 1});
@@ -48,19 +48,9 @@ const initSwiper = () => {
 	new Swiper('.reviewsSwiper', {
 		centeredSlides: true,
 		slidesPerView: 1,
-		spaceBetween: 0,
-		speed: 1000,
-		autoplay: {
-			delay: 10000,
-			disableOnInteraction: false,
-		},
-		effect: 'cube',
-		cubeEffect: {
-			shadow: false,
-			slideShadows: false,
-			shadowOffset: 20,
-			shadowScale: 0.94,
-		},
+		spaceBetween: 30,
+		speed: 850,
+		effect: 'slide',
 		pagination: {
 			el: '.reviews .swiper-pagination',
 			type: 'fraction',
@@ -82,14 +72,9 @@ const initSwiper = () => {
 	});
 
 	new Swiper('.bestSwiper', {
-		speed: 1000,
-		autoplay: {
-			delay: 7500,
-			disableOnInteraction: false,
-		},
+		speed: 850,
 		slidesPerView: 'auto',
-		spaceBetween: 30,
-		slidesOffsetAfter: 30,
+		spaceBetween: 50,
 		effect: 'slide',
 		pagination: {
 			el: '.best .swiper-pagination',

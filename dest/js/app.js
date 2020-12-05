@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 /*
 *
@@ -14,6 +14,23 @@
 * ============================
 * ============================
 * */
+
+/**
+ * @name initHeaderFixed
+ *
+ * @description Fixing the site header in the scrolling page.
+ */
+var initHeaderFixed = function initHeaderFixed() {
+
+	var countScroll = $(window).scrollTop(),
+	    headerElement = $('.header');
+
+	if (countScroll > 10) {
+		headerElement.addClass("header--fixed");
+	} else {
+		headerElement.removeClass("header--fixed");
+	}
+};
 
 /**
  * @name initPopups
@@ -124,6 +141,28 @@ var initPreventBehavior = function initPreventBehavior() {
 };
 
 /**
+ * @name initSmoothScroll
+ *
+ * @description Smooth transition to anchors to the block.
+ */
+var initSmoothScroll = function initSmoothScroll() {
+	var btnName = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : "[anchor-js]";
+	var animateSpeed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 850;
+
+
+	$(btnName).on("click", function (e) {
+
+		var linkHref = $(e.currentTarget).attr('href'),
+		    headerHeight = $(".header").outerHeight() || 0,
+		    topHeightOffset = $(linkHref).offset().top - headerHeight;
+
+		$('body, html').animate({
+			scrollTop: topHeightOffset
+		}, animateSpeed);
+	});
+};
+
+/**
  * @name initSwiper
  *
  * @description initialize Swiper
@@ -136,13 +175,13 @@ var initSwiper = function initSwiper() {
 		loop: true,
 		freeMode: true,
 		effect: 'slide',
-		speed: 1000,
+		speed: 850,
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: false
 		},
 		slidesPerView: 'auto',
-		spaceBetween: 35,
+		spaceBetween: 30,
 		on: {
 			"init": function init() {
 				$(this.$el).css({ opacity: 1 });
@@ -154,13 +193,13 @@ var initSwiper = function initSwiper() {
 		loop: true,
 		freeMode: true,
 		effect: 'slide',
-		speed: 1000,
+		speed: 850,
 		autoplay: {
 			delay: 5000,
 			disableOnInteraction: false
 		},
 		slidesPerView: 'auto',
-		spaceBetween: 35,
+		spaceBetween: 30,
 		on: {
 			"init": function init() {
 				$(this.$el).css({ opacity: 1 });
@@ -171,19 +210,9 @@ var initSwiper = function initSwiper() {
 	new Swiper('.reviewsSwiper', {
 		centeredSlides: true,
 		slidesPerView: 1,
-		spaceBetween: 0,
-		speed: 1000,
-		autoplay: {
-			delay: 10000,
-			disableOnInteraction: false
-		},
-		effect: 'cube',
-		cubeEffect: {
-			shadow: false,
-			slideShadows: false,
-			shadowOffset: 20,
-			shadowScale: 0.94
-		},
+		spaceBetween: 30,
+		speed: 850,
+		effect: 'slide',
 		pagination: {
 			el: '.reviews .swiper-pagination',
 			type: 'fraction',
@@ -205,14 +234,9 @@ var initSwiper = function initSwiper() {
 	});
 
 	new Swiper('.bestSwiper', {
-		speed: 1000,
-		autoplay: {
-			delay: 7500,
-			disableOnInteraction: false
-		},
+		speed: 850,
 		slidesPerView: 'auto',
-		spaceBetween: 30,
-		slidesOffsetAfter: 30,
+		spaceBetween: 50,
 		effect: 'slide',
 		pagination: {
 			el: '.best .swiper-pagination',
@@ -220,6 +244,25 @@ var initSwiper = function initSwiper() {
 		}
 	});
 };
+
+/**
+ * @description Window on load.
+ */
+window.addEventListener('load', function (ev) {
+	initHeaderFixed();
+});
+
+/**
+ * @description Window on resize.
+ */
+window.addEventListener('resize', function (ev) {});
+
+/**
+ * @description Window on scroll.
+ */
+window.addEventListener('scroll', function (ev) {
+	initHeaderFixed();
+});
 
 /**
  * @description Document DOM ready.
@@ -231,7 +274,29 @@ var initSwiper = function initSwiper() {
  * ============================================= */
 	var slideShowPreview = function slideShowPreview() {
 		$('[slideshow-preview-js]').on('click', function (ev) {
-			$('[popup-gallery-js]').find('a.swiper-slide-link').eq(0).trigger('click');
+			$('[popup-gallery-js]').find('.slideshow__gallery a').eq(0).trigger('click');
+		});
+	};
+
+	var headerNav = function headerNav() {
+		$('.header__nav a').on('click', function (ev) {
+			$('.header__nav a').removeClass('is-active');
+			$(ev.currentTarget).addClass('is-active');
+		});
+	};
+
+	var footerCollapse = function footerCollapse() {
+		$('.footer__collapse-head').on('click', function (ev) {
+			if ($(window).width() < 1024) {
+				if ($(ev.currentTarget).hasClass('is-active')) {
+					$(ev.currentTarget).removeClass('is-active');
+					$(ev.currentTarget).siblings('.footer__collapse-body').slideUp(300);
+				} else {
+					$(ev.currentTarget).addClass('is-active');
+					$('.footer__collapse-body').slideUp(300);
+					$(ev.currentTarget).siblings('.footer__collapse-body').slideDown(300);
+				}
+			}
 		});
 	};
 	/*
@@ -251,10 +316,13 @@ var initSwiper = function initSwiper() {
 		// lib
 		initSwiper();
 		initPopups();
+		initSmoothScroll();
 		// ==========================================
 
 		// callback
 		slideShowPreview();
+		headerNav();
+		footerCollapse();
 		// ==========================================
 	};
 	initNative();

@@ -2,8 +2,8 @@
 
 .setup {
 	position: relative;
-	padding-top: 150px;
-	padding-bottom: 150px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	background-image: url('../img/img-setup-bg@2x.png');
 	background-repeat: no-repeat;
 	background-position: center;
@@ -34,7 +34,7 @@
 			flex: 1;
 			min-width: 1px;
 			max-width: 100%;
-			padding: 50px 70px;
+			padding: 50px;
 		}
 	}
 
@@ -72,13 +72,13 @@
 			color: #ffffff;
 			text-align: center;
 			line-height: 1.1;
-			font-size: 38px;
+			font-size: 30px;
 			@extend %fontPermanentMarker;
 			text-shadow: 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000;
 
 			span {
 				display: block;
-				font-size: 49px;
+				font-size: 42px;
 			}
 		}
 
@@ -88,23 +88,32 @@
 			left: 50%;
 			transform: translate(-50%, -50%);
 
+			&:hover {
+				.icon-font {
+					transform: scale(0.9);
+					@include transition(transform);
+				}
+			}
+
 			.icon-font {
-				font-size: 90px;
+				font-size: 65px;
 				color: #ffffff;
+				filter: drop-shadow(0 5px 10px rgba(#000, 0.15));
+				@include transition(transform);
 			}
 		}
 	}
 
 	&__title {
-		padding-bottom: 58px;
+		padding-bottom: 40px;
 		color: #df9801;
 		text-align: left;
 	}
 
 	&__desc {
-		padding-bottom: 50px;
+		padding-bottom: 20px;
 		color: #fff;
-		font-size: 18px;
+		font-size: 16px;
 	}
 }
 

@@ -2,48 +2,139 @@
 
 .header {
 	z-index: 999;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
+	box-shadow: 0 5px 5px 0 rgba(#000, 0);
+	background-color: transparent;
+	@include transition(box-shadow, background-color);
+
+	&.header--fixed {
+		box-shadow: 0 5px 10px 0 rgba(#000, 0.05);
+		background-color: rgba(#ffffff, 0.975);
+		@include transition(box-shadow, background-color);
+
+		.header {
+			&__wrapper {
+				padding-top: 5px;
+				padding-bottom: 5px;
+				@include transition(padding-top, padding-bottom);
+			}
+
+			&__nav {
+				a {
+					color: #1d1d1d;
+
+					&:before,
+					&:after {
+						background-color: #1d1d1d;
+					}
+				}
+			}
+		}
+
+		.logo {
+			&__img {
+				display: block;
+				width: 100%;
+				height: 100%;
+
+				&-curve {
+					@include transition(stroke);
+
+					&-1 {
+						stroke:#1d1d1b;
+					}
+					&-2 {
+						stroke:#1d1d1b;
+					}
+				}
+				&-circle {
+					&--left {
+						fill:#1d1d1b;
+						@include transition(fill);
+					}
+					&--middle {
+						stroke:#1d1d1b;
+						@include transition(stroke);
+					}
+					&--right {
+						stroke:#1d1d1b;
+						@include transition(stroke);
+					}
+				}
+				&-letter {
+					&--top {
+						fill:#fff;
+						stroke:#fff;
+						@include transition(fill, stroke);
+					}
+					&--bottom {
+						fill:#fff;
+						stroke:#1d1d1b;
+						@include transition(fill, stroke);
+					}
+				}
+			}
+		}
+	}
 
 	&__wrapper {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		padding: 60px 70px;
+		padding: 30px;
+		@include transition(padding-top, padding-bottom);
 	}
 
 	&__nav {
 		display: flex;
 		align-items: center;
-		padding-right: 90px;
 
 		a {
 			position: relative;
 			display: flex;
 			color: #ffffff;
-			font-size: 25px;
+			font-size: 18px;
+			font-weight: 600;
+			@include transition(color);
 
+			&:before,
 			&:after {
 				content: '';
-				opacity: 0;
 				position: absolute;
 				top: 100%;
-				left: 0;
-				width: 100%;
+				width: 0;
 				height: 2px;
 				background-color: #ffffff;
+				@include transition(width, background-color);
 			}
 
+			&:before {
+				left: 50%;
+			}
+			&:after {
+				right: 50%;
+			}
+
+			&:hover,
 			&.is-active {
+				&:before,
 				&:after {
-					opacity: 1;
+					width: 50%;
+				}
+			}
+
+			&:hover {
+				&:before,
+				&:after {
+					@include transition(width, background-color);
 				}
 			}
 
 			&:not(:last-of-type) {
-				margin-right: 70px;
+				margin-right: 50px;
 			}
 		}
 	}

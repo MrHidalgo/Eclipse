@@ -38,10 +38,13 @@
       height: 100%;
 
       img {
+        position: relative;
+        top: 130px;
         display: block;
         max-width: 100%;
         height: auto;
-        transform: translateY(185px);
+        max-height: 100%;
+        margin-left: auto;
       }
     }
   }
@@ -50,8 +53,10 @@
     z-index: 2;
     position: relative;
     display: flex;
-    padding-top: 384px;
-    padding-bottom: 399px;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 100px;
 
     > div {
       width: 100%;
@@ -60,15 +65,15 @@
   }
 
   &__title {
-    padding-bottom: 50px;
+    padding-bottom: 40px;
     @extend %fontPermanentMarker;
-    font-size: 70px;
+    font-size: 65px;
     color: #ffffff;
   }
 
   &__desc {
-    padding-bottom: 100px;
-    font-size: 25px;
+    padding-bottom: 80px;
+    font-size: 20px;
     color: #ffffff;
   }
 
@@ -82,12 +87,12 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 45px;
-      padding-left: 30px;
-      padding-right: 30px;
+      height: 55px;
+      padding-left: 50px;
+      padding-right: 50px;
       border-radius: 10rem;
       border-style: solid;
-      border-width: 2px;
+      border-width: 1px;
       border-color: rgb(255, 255, 255);
       background-color: transparent;
       @include transition(background-color);
@@ -104,8 +109,8 @@
 
       span {
         color: #ffffff;
-        font-size: 20px;
-        font-weight: 700;
+        font-size: 18px;
+        font-weight: 600;
         line-height: 1;
         @include transition(color);
       }

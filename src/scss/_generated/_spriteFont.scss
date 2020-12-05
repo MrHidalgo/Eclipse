@@ -42,14 +42,17 @@
 	@if $filename == play {
 		$char: "\E005";
 	}
-	@if $filename == quotation-marks {
+	@if $filename == plus {
 		$char: "\E006";
 	}
-	@if $filename == twitter {
+	@if $filename == quotation-marks {
 		$char: "\E007";
 	}
-	@if $filename == youtube {
+	@if $filename == twitter {
 		$char: "\E008";
+	}
+	@if $filename == youtube {
+		$char: "\E009";
 	}
 
 	@return $char;
@@ -84,6 +87,10 @@
 }
 .icon-play {
 	@include icon(play);
+
+}
+.icon-plus {
+	@include icon(plus);
 
 }
 .icon-quotation-marks {

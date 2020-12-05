@@ -2,7 +2,7 @@
 
 .logo {
 	&.logo--header {
-		max-width: 188px;
+		max-width: 100px;
 	}
 	&.logo--footer {
 		max-width: 118px;
@@ -56,6 +56,8 @@
 		height: 100%;
 
 		&-curve {
+			@include transition(stroke);
+
 			&-1 {
 				stroke:#1d1d1b;
 			}
@@ -65,23 +67,28 @@
 		}
 		&-circle {
 			&--left {
-				fill:#1d1d1b
+				fill:#1d1d1b;
+				@include transition(fill);
 			}
 			&--middle {
 				stroke:#1d1d1b;
+				@include transition(stroke);
 			}
 			&--right {
 				stroke:#1d1d1b;
+				@include transition(stroke);
 			}
 		}
 		&-letter {
 			&--top {
 				fill:#fff;
 				stroke:#fff;
+				@include transition(fill, stroke);
 			}
 			&--bottom {
 				fill:#fff;
 				stroke:#1d1d1b;
+				@include transition(fill, stroke);
 			}
 		}
 	}

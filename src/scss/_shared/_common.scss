@@ -3,10 +3,16 @@
 // COPYRIGHT
 .copyright {
 	padding-bottom: 23px;
+	@include adaptive(1023) {
+		padding-bottom: 20px;
+	}
 
 	&__text {
 		color: #ffffff;
 		font-size: 16px;
+		@include adaptive(1023) {
+			font-size: 15px;
+		}
 	}
 }
 
@@ -22,8 +28,19 @@
 		justify-content: center;
 		width: 42px;
 		height: 42px;
+		border: 1px solid #fff;
 		border-radius: 50%;
 		background-color: #ffffff;
+		@include transition(background-color);
+
+		&:hover {
+			background-color: transparent;
+			@include transition(background-color);
+
+			.icon-font {
+				color: #ffffff;
+			}
+		}
 
 		&:not(:last-of-type) {
 			margin-right: 25px;
