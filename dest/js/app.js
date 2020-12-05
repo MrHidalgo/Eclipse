@@ -257,6 +257,17 @@ var initSwiper = function initSwiper() {
 		pagination: {
 			el: '.best .swiper-pagination',
 			clickable: true
+		},
+		breakpoints: {
+			280: {
+				spaceBetween: 10
+			},
+			768: {
+				spaceBetween: 20
+			},
+			1024: {
+				spaceBetween: 30
+			}
 		}
 	});
 };

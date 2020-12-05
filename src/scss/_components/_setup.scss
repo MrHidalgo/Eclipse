@@ -17,6 +17,9 @@
 		width: 100%;
 		height: 100%;
 		background-color: rgba(#000, 0.6);
+		@include adaptive(767) {
+			background-color: rgba(#000, 0.4);
+		}
 	}
 
 	&__wrapper {
@@ -24,10 +27,24 @@
 		position: relative;
 		display: flex;
 		align-items: center;
+		@include adaptive(767) {
+			flex-direction: column-reverse;
+		}
 
 		&-left {
 			width: 100%;
 			max-width: calc((100% / 2) + 20px);
+			@include adaptive(767) {
+				max-width: 100%;
+			}
+
+			.social {
+				display: none;
+				padding-top: 25px;
+				@include adaptive(767) {
+					display: flex;
+				}
+			}
 		}
 
 		&-right {
@@ -35,6 +52,13 @@
 			min-width: 1px;
 			max-width: 100%;
 			padding: 50px;
+			@include adaptive(767) {
+				padding: 0 0 25px 0;
+
+				.social {
+					display: none;
+				}
+			}
 		}
 	}
 
@@ -45,6 +69,9 @@
 		height: 430px;
 		background-color: #ffffff;
 		box-shadow: 12px 15px 43px 0 rgba(12, 13, 12, 0.59);
+		@include adaptive(767) {
+			height: 300px;
+		}
 
 		&-bg {
 			@extend %imageResCoverAbs;
@@ -75,10 +102,18 @@
 			font-size: 30px;
 			@extend %fontPermanentMarker;
 			text-shadow: 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000;
+			@include adaptive(767) {
+				width: 300px;
+				height: 300px;
+				font-size: 24px;
+			}
 
 			span {
 				display: block;
 				font-size: 42px;
+				@include adaptive(767) {
+					font-size: 32px;
+				}
 			}
 		}
 
@@ -100,6 +135,9 @@
 				color: #ffffff;
 				filter: drop-shadow(0 5px 10px rgba(#000, 0.15));
 				@include transition(transform);
+				@include adaptive(767) {
+					font-size: 45px;
+				}
 			}
 		}
 	}
@@ -114,6 +152,10 @@
 		padding-bottom: 20px;
 		color: #fff;
 		font-size: 16px;
+		@include adaptive(767) {
+			padding-bottom: 0;
+			font-size: 15px;
+		}
 	}
 }
 
